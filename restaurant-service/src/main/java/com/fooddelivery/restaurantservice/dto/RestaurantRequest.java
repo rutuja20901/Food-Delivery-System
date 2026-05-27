@@ -1,0 +1,74 @@
+package com.fooddelivery.restaurantservice.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+@Data
+public class RestaurantRequest {
+
+	
+	@NotBlank(message="Restaurant name required")
+	private String name;
+	
+	@NotBlank(message="Address required")
+	private String address;
+	
+	@NotBlank(message="Cuisine Type required")
+	private String cuisineType;
+	
+	private boolean open;
+
+	public RestaurantRequest() {
+		super();
+	}
+
+	public RestaurantRequest(@NotBlank(message = "Restaurant name required") String name,
+			@NotBlank(message = "Address required") String address,
+			@NotBlank(message = "Cuisine Type required") String cuisineType, boolean open) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.cuisineType = cuisineType;
+		this.open = open;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getCuisineType() {
+		return cuisineType;
+	}
+
+	public void setCuisineType(String cuisineType) {
+		this.cuisineType = cuisineType;
+	}
+
+	public boolean isOpen() {
+		return open;
+	}
+
+	public void setOpen(boolean open) {
+		this.open = open;
+	}
+
+	@Override
+	public String toString() {
+		return "RestaurantRequest [name=" + name + ", address=" + address + ", cuisineType=" + cuisineType + ", open="
+				+ open + "]";
+	}
+	
+	
+}
