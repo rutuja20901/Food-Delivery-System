@@ -6,25 +6,46 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.fooddelivery.orderservice.dto.OrderItemRequest;
 import com.fooddelivery.orderservice.dto.OrderItemResponse;
 import com.fooddelivery.orderservice.dto.OrderRequest;
 import com.fooddelivery.orderservice.dto.OrderResponse;
+import com.fooddelivery.orderservice.dto.RestaurantResponse;
 import com.fooddelivery.orderservice.entity.Order;
 import com.fooddelivery.orderservice.entity.OrderItem;
 import com.fooddelivery.orderservice.enums.OrderStatus;
+import com.fooddelivery.orderservice.exception.ResourceNotFoundException;
 import com.fooddelivery.orderservice.repository.OrderRepository;
 
 @Service
 public class OrderService {
+	
+	private static final Logger log =
+	        LoggerFactory.getLogger(
+	                OrderService.class);
+
 
 	@Autowired
 	private OrderRepository orderRepository;
 	
+	@Autowired
+	private RestTemplate restTemplate;
+	
 	public OrderResponse createOrder(OrderRequest request) {
+		String url = "http://localhost:8083/restaurant" + request.getRestaurantId();
+		
+		RestaurantResponse res = restTemplate.getForObject(url, RestaurantResponse.class);
+		
+		if(res == null) {
+			throw new ResourceNotFoundException("Restaurant not found!");
+		}
+		
 		Order order = new Order();
 		
 		order.setUserId(request.getUserId());
@@ -72,7 +93,7 @@ public class OrderService {
 	}
 	
 	public OrderResponse getOrderById(Long id) {
-		Order order = orderRepository.findById(id).orElseThrow(() -> new RuntimeException("Order not found!"));
+		Order order = orderRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Order not found!"));
 		return mapToResponse(order);
 	}
 	
@@ -82,14 +103,14 @@ public class OrderService {
 	
 	
 	public OrderResponse updateStatus(String status, Long id) {
-		Order order = orderRepository.findById(id).orElseThrow(() -> new RuntimeException("Order not found!"));
+		Order order = orderRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Order not found!"));
 		 order.setOrderStatus(
 		            OrderStatus.valueOf(status.toUpperCase()));
 		return mapToResponse(order);
 	}
 	
 	public String cancelOrder(Long id) {
-		Order order = orderRepository.findById(id).orElseThrow(() -> new RuntimeException("Order not found!"));
+		Order order = orderRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Order not found!"));
 		order.setOrderStatus(OrderStatus.CANCELLED);
 		orderRepository.save(order);
 		return "Order Deleted Successfully";

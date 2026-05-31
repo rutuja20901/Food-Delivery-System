@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +22,7 @@ import com.fooddelivery.orderservice.service.OrderService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/orders")
 public class OrderController {
 
 	@Autowired
@@ -31,7 +33,14 @@ public class OrderController {
 
 	@PostMapping
 	public ResponseEntity<OrderResponse> createOrder(@Valid @RequestBody OrderRequest request) {
-		
+		System.out.println("Controller hit");
+		Authentication auth =
+			    SecurityContextHolder
+			    .getContext()
+			    .getAuthentication();
+
+			System.out.println(auth.getName());
+			System.out.println(auth.getAuthorities());
 		return ResponseEntity.ok(orderService.createOrder(request));
 	}
 	

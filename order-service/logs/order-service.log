@@ -1,0 +1,2943 @@
+2026-05-30 12:20:48
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 12:20:48
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Starting OrderServiceApplicationTests using Java 21.0.6 with PID 13832 (started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 12:20:48
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 12:20:51
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 12:20:51
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 182 ms. Found 2 JPA repository interfaces.
+2026-05-30 12:20:53
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 12:20:53
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 12:20:56
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 12:20:56
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 12:20:57
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e91cf69
+2026-05-30 12:20:57
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 12:20:57
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 12:20:57
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 12:20:57
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 12:21:00
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 12:21:03
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:21:03
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 12:21:03
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 12:21:04
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 607be92e-68ea-489a-9344-605cdb7a396c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 12:21:04
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 12:21:07
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Started OrderServiceApplicationTests in 19.516 seconds (process running for 24.425)
+2026-05-30 12:21:08
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:21:08
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-05-30 12:21:08
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-05-30 12:21:30
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 12:21:30
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 30528 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 12:21:30
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 12:21:33
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 12:21:33
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 156 ms. Found 2 JPA repository interfaces.
+2026-05-30 12:21:35
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 12:21:35
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:21:35
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 12:21:35
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 12:21:36
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 4772 ms
+2026-05-30 12:21:36
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 12:21:37
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 12:21:39
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 12:21:39
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 12:21:39
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 12:21:39
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 12:21:39
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 12:21:39
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 12:21:39
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 12:21:41
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 12:21:43
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:21:44
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 12:21:44
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 12:21:44
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 90794d85-1ea4-4708-9263-83fb67983b8f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 12:21:44
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 12:21:46
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:21:46
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 12:21:46
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 17.432 seconds (process running for 19.189)
+2026-05-30 12:22:37
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 12:22:37
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 12:22:37
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 5 ms
+2026-05-30 12:30:31
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 12:30:31
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 30508 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 12:30:31
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 12:30:34
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 12:30:34
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 144 ms. Found 2 JPA repository interfaces.
+2026-05-30 12:30:36
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 12:30:36
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:30:36
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 12:30:36
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 12:30:37
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 5285 ms
+2026-05-30 12:30:37
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 12:30:38
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 12:30:39
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 12:30:40
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 12:30:40
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 12:30:40
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 12:30:40
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 12:30:40
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 12:30:40
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 12:30:43
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 12:30:45
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:30:46
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 12:30:46
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 12:30:46
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 0d3b30cf-327d-4c50-b3d9-9adbd343ffd5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 12:30:46
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 12:30:48
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:30:48
+                WARN 
+                o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext
+                - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-30 12:30:48
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:30:48
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-05-30 12:30:48
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-05-30 12:30:48
+                INFO 
+                o.s.b.a.l.ConditionEvaluationReportLogger
+                - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-30 12:30:48
+                ERROR
+                o.s.b.d.LoggingFailureAnalysisReporter
+                - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8084 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8084 or configure this application to listen on another port.
+
+2026-05-30 12:31:36
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 12:31:36
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 11660 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 12:31:36
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 12:31:38
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 12:31:39
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 161 ms. Found 2 JPA repository interfaces.
+2026-05-30 12:31:40
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 12:31:41
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:31:41
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 12:31:41
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 12:31:41
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 4553 ms
+2026-05-30 12:31:42
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 12:31:42
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 12:31:44
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 12:31:44
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 12:31:44
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 12:31:44
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 12:31:44
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 12:31:44
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 12:31:45
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 12:31:47
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 12:31:49
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:31:49
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 12:31:49
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 12:31:50
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 5256ead4-4d86-4c49-9720-9d1dcdd46a57
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 12:31:50
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 12:31:51
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:31:51
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 12:31:51
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 16.592 seconds (process running for 17.87)
+2026-05-30 12:32:11
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 12:32:11
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 12:32:11
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 6 ms
+2026-05-30 12:33:36
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 12:33:36
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 21412 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 12:33:36
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 12:33:39
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 12:33:39
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 132 ms. Found 2 JPA repository interfaces.
+2026-05-30 12:33:41
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 12:33:41
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:33:41
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 12:33:41
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 12:33:41
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 4924 ms
+2026-05-30 12:33:42
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 12:33:42
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 12:33:44
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 12:33:44
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 12:33:45
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 12:33:45
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 12:33:45
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 12:33:45
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 12:33:45
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 12:33:47
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 12:33:49
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:33:50
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 12:33:50
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 12:33:50
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 54954cef-12b8-4380-a3f0-690ba76a9d7a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 12:33:50
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 12:33:52
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:33:53
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 12:33:53
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 18.155 seconds (process running for 19.721)
+2026-05-30 12:33:58
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 12:33:58
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 12:33:58
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 8 ms
+2026-05-30 12:41:03
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 12:41:04
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 27112 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 12:41:04
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 12:41:06
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 12:41:06
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 147 ms. Found 2 JPA repository interfaces.
+2026-05-30 12:41:08
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 12:41:08
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:41:08
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 12:41:08
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 12:41:09
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 4852 ms
+2026-05-30 12:41:09
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 12:41:10
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 12:41:11
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 12:41:12
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 12:41:12
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 12:41:12
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 12:41:12
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 12:41:12
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 12:41:12
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 12:41:15
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 12:41:16
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:41:16
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 12:41:17
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 12:41:17
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 41c6835e-6332-4584-9349-6b746491f777
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 12:41:17
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 12:41:19
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:41:19
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 12:41:19
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 17.186 seconds (process running for 18.505)
+2026-05-30 12:42:05
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 12:42:05
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 12:42:05
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 5 ms
+2026-05-30 12:42:06
+                INFO 
+                c.f.o.service.OrderService
+                - Creating user id: 1
+2026-05-30 12:44:39
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 12:44:39
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 4276 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 12:44:39
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 12:44:42
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 12:44:42
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 147 ms. Found 2 JPA repository interfaces.
+2026-05-30 12:44:44
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 12:44:44
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:44:44
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 12:44:44
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 12:44:45
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 4892 ms
+2026-05-30 12:44:45
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 12:44:46
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 12:44:47
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 12:44:47
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 12:44:48
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 12:44:48
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 12:44:48
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 12:44:48
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 12:44:48
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 12:44:50
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 12:44:52
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:44:52
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 12:44:52
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 12:44:53
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 215827e0-d19e-4930-a03f-c416f4b176b9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 12:44:53
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 12:44:54
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:44:54
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 12:44:54
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 17.042 seconds (process running for 18.383)
+2026-05-30 12:45:13
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 12:45:13
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 12:45:13
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 7 ms
+2026-05-30 12:52:29
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 12:52:29
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 22588 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 12:52:29
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 12:52:32
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 12:52:32
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 246 ms. Found 2 JPA repository interfaces.
+2026-05-30 12:52:34
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 12:52:34
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:52:34
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 12:52:34
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 12:52:35
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 5327 ms
+2026-05-30 12:52:35
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 12:52:36
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 12:52:38
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 12:52:38
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 12:52:38
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a7ae340
+2026-05-30 12:52:38
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 12:52:38
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 12:52:38
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 12:52:38
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 12:52:41
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 12:52:43
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:52:43
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 12:52:44
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 12:52:44
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 05870dd5-56a4-4aef-9353-135298b6bf5a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 12:52:44
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 12:52:46
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:52:46
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 12:52:46
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 18.702 seconds (process running for 20.239)
+2026-05-30 12:53:18
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 12:53:18
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 12:53:18
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 7 ms
+2026-05-30 12:57:12
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 12:57:13
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 25772 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 12:57:13
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 12:57:16
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 12:57:16
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 141 ms. Found 2 JPA repository interfaces.
+2026-05-30 12:57:18
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 12:57:18
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:57:18
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 12:57:18
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 12:57:18
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 5325 ms
+2026-05-30 12:57:19
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 12:57:19
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 12:57:22
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 12:57:22
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 12:57:23
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d4818e8
+2026-05-30 12:57:23
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 12:57:23
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 12:57:23
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 12:57:23
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 12:57:26
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 12:57:29
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 12:57:29
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 12:57:29
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 12:57:30
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: b2dab8c0-16aa-4c61-ab7c-9a3d2e5cde24
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 12:57:30
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 12:57:31
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 12:57:31
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 12:57:31
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 20.967 seconds (process running for 22.438)
+2026-05-30 12:57:38
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 12:57:38
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 12:57:38
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 4 ms
+2026-05-30 13:51:20
+                WARN 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m27s457ms199µs400ns).
+2026-05-30 13:56:26
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 13:56:26
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 32204 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 13:56:26
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 13:56:31
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 13:56:31
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 277 ms. Found 2 JPA repository interfaces.
+2026-05-30 13:56:34
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 13:56:34
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 13:56:34
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 13:56:34
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 13:56:34
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 7861 ms
+2026-05-30 13:56:36
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 13:56:36
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 13:56:38
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 13:56:38
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 13:56:39
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 13:56:39
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 13:56:39
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 13:56:39
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 13:56:39
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 13:56:41
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 13:56:43
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 13:56:43
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 13:56:44
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 13:56:44
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 4219f628-066c-4f44-b920-7f046ed3be7f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 13:56:44
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 13:56:46
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 13:56:46
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 13:56:46
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 22.645 seconds (process running for 24.629)
+2026-05-30 13:57:24
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 13:57:24
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 13:57:25
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 7 ms
+2026-05-30 13:58:26
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 13:58:26
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Starting OrderServiceApplicationTests using Java 21.0.6 with PID 11996 (started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 13:58:26
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 13:58:28
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 13:58:29
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 159 ms. Found 2 JPA repository interfaces.
+2026-05-30 13:58:30
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 13:58:31
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 13:58:33
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 13:58:33
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 13:58:33
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@389bc2d3
+2026-05-30 13:58:33
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 13:58:33
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 13:58:33
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 13:58:34
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 13:58:36
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 13:58:37
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 13:58:38
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 13:58:38
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 13:58:39
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 4e8c2e28-4995-4803-a98a-757c9f4e5221
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 13:58:39
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 13:58:41
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Started OrderServiceApplicationTests in 16.057 seconds (process running for 20.474)
+2026-05-30 13:58:42
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 13:58:42
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-05-30 13:58:42
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-05-30 13:59:01
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 13:59:01
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 22964 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 13:59:01
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 13:59:04
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 13:59:04
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 157 ms. Found 2 JPA repository interfaces.
+2026-05-30 13:59:06
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 13:59:06
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 13:59:06
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 13:59:06
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 13:59:06
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 4598 ms
+2026-05-30 13:59:07
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 13:59:07
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 13:59:09
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 13:59:09
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 13:59:09
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 13:59:09
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 13:59:09
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 13:59:09
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 13:59:09
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 13:59:12
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 13:59:13
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 13:59:13
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 13:59:14
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 13:59:14
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: f6ad9559-2041-4560-b202-e7489a468ae3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 13:59:14
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 13:59:16
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 13:59:16
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 13:59:16
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 16.691 seconds (process running for 18.106)
+2026-05-30 13:59:25
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 13:59:25
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 13:59:25
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 6 ms
+2026-05-30 14:01:18
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 14:01:19
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 25544 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 14:01:19
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 14:01:21
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 14:01:21
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 147 ms. Found 2 JPA repository interfaces.
+2026-05-30 14:01:23
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 14:01:23
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:01:23
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 14:01:23
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 14:01:23
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 4517 ms
+2026-05-30 14:01:24
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 14:01:24
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 14:01:26
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 14:01:26
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 14:01:26
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 14:01:26
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 14:01:26
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 14:01:26
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 14:01:27
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 14:01:29
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 14:01:31
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 14:01:31
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 14:01:31
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 14:01:32
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: bad38cd6-86ea-4c7a-9a21-e42ad223e793
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 14:01:32
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 14:01:33
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:01:33
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 14:01:33
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 16.539 seconds (process running for 17.816)
+2026-05-30 14:01:47
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 14:01:47
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 14:01:47
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 12 ms
+2026-05-30 14:03:12
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 14:03:12
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 32428 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 14:03:12
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 14:03:15
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 14:03:15
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 178 ms. Found 2 JPA repository interfaces.
+2026-05-30 14:03:17
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 14:03:17
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:03:17
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 14:03:17
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 14:03:18
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 5341 ms
+2026-05-30 14:03:18
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 14:03:19
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 14:03:20
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 14:03:21
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 14:03:21
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 14:03:21
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 14:03:21
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 14:03:21
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 14:03:21
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 14:03:23
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 14:03:25
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 14:03:25
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 14:03:26
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 14:03:26
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 3038f280-9c4d-4e7a-8d7c-ddd59e49606c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 14:03:26
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 14:03:28
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:03:28
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 14:03:28
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 17.293 seconds (process running for 18.673)
+2026-05-30 14:03:36
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 14:03:36
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 14:03:36
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 6 ms
+2026-05-30 14:04:24
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 14:04:25
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 16012 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 14:04:25
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 14:04:27
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 14:04:27
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 143 ms. Found 2 JPA repository interfaces.
+2026-05-30 14:04:29
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 14:04:29
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:04:29
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 14:04:29
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 14:04:29
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 4666 ms
+2026-05-30 14:04:30
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 14:04:30
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 14:04:32
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 14:04:32
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 14:04:32
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 14:04:32
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 14:04:32
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 14:04:32
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 14:04:32
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 14:04:34
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 14:04:36
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 14:04:36
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 14:04:37
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 14:04:37
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 06ccf025-e949-488e-9aee-84a62080e111
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 14:04:37
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 14:04:39
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:04:39
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 14:04:39
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 15.678 seconds (process running for 16.923)
+2026-05-30 14:04:44
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 14:04:44
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 14:04:44
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 6 ms
+2026-05-30 14:05:46
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 14:05:46
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 25052 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 14:05:46
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 14:05:49
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 14:05:49
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 157 ms. Found 2 JPA repository interfaces.
+2026-05-30 14:05:51
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 14:05:51
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:05:52
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 14:05:52
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 14:05:52
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 5725 ms
+2026-05-30 14:05:53
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 14:05:53
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 14:05:55
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 14:05:55
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 14:05:55
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 14:05:55
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 14:05:55
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 14:05:55
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 14:05:55
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 14:05:58
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 14:06:00
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 14:06:01
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 14:06:01
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 14:06:01
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: d9bd522b-3e66-415e-abc9-7fe2490811ac
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 14:06:01
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 14:06:03
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:06:03
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 14:06:03
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 19.344 seconds (process running for 20.541)
+2026-05-30 14:06:11
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 14:06:11
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 14:06:11
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 15 ms
+2026-05-30 14:07:25
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 14:07:25
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 6112 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 14:07:25
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 14:07:28
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 14:07:28
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 142 ms. Found 2 JPA repository interfaces.
+2026-05-30 14:07:30
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 14:07:30
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:07:30
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 14:07:30
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 14:07:30
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 4820 ms
+2026-05-30 14:07:31
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 14:07:31
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 14:07:32
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 14:07:32
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 14:07:33
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b00d59
+2026-05-30 14:07:33
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 14:07:33
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 14:07:33
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 14:07:33
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 14:07:35
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 14:07:37
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 14:07:37
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 14:07:38
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 14:07:38
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: b39a392c-423f-4654-a841-77ae86384109
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 14:07:38
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 14:07:39
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:07:39
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 14:07:39
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 16.325 seconds (process running for 17.701)
+2026-05-30 14:08:23
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 14:08:23
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 14:08:23
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 7 ms
+2026-05-30 14:10:29
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 14:10:29
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Starting OrderServiceApplicationTests using Java 21.0.6 with PID 32976 (started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 14:10:29
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 14:10:32
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 14:10:32
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 134 ms. Found 2 JPA repository interfaces.
+2026-05-30 14:10:34
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 14:10:34
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 14:10:36
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 14:10:36
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 14:10:37
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f4d391c
+2026-05-30 14:10:37
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 14:10:37
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 14:10:37
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 14:10:37
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 14:10:40
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 14:10:42
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 14:10:42
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 14:10:43
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 14:10:43
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 25d06f4b-27eb-4ee7-bf36-0030198a27d2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 14:10:43
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 14:10:45
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Started OrderServiceApplicationTests in 17.236 seconds (process running for 21.544)
+2026-05-30 14:10:47
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 14:10:47
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-05-30 14:10:47
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-05-30 14:11:06
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 14:11:07
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Starting OrderServiceApplication using Java 21.0.6 with PID 8620 (C:\Users\Rutuja\git\smart-tracker\order-service\target\classes started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 14:11:07
+                INFO 
+                c.f.o.OrderServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 14:11:09
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 14:11:09
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 225 ms. Found 2 JPA repository interfaces.
+2026-05-30 14:11:11
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8084 (http)
+2026-05-30 14:11:11
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:11:11
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-05-30 14:11:11
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-30 14:11:12
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 4974 ms
+2026-05-30 14:11:12
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 14:11:13
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 14:11:15
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 14:11:15
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 14:11:15
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72237be8
+2026-05-30 14:11:15
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 14:11:15
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 14:11:15
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 14:11:15
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 14:11:18
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 14:11:19
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 14:11:19
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 14:11:20
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 14:11:20
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 9a39e920-b6f7-4d68-a304-d5f6da36be40
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 14:11:20
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 14:11:22
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8084"]
+2026-05-30 14:11:22
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8084 (http) with context path '/'
+2026-05-30 14:11:22
+                INFO 
+                c.f.o.OrderServiceApplication
+                - Started OrderServiceApplication in 16.697 seconds (process running for 18.016)
+2026-05-30 14:11:34
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30 14:11:34
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-05-30 14:11:34
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 9 ms
+2026-05-30 14:11:36
+                INFO 
+                c.f.o.service.OrderService
+                - Creating user id: 1
+2026-05-30 14:55:12
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-30 14:55:12
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Starting OrderServiceApplicationTests using Java 21.0.6 with PID 13540 (started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-30 14:55:12
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-30 14:55:17
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30 14:55:17
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 247 ms. Found 2 JPA repository interfaces.
+2026-05-30 14:55:19
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30 14:55:19
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-30 14:55:23
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30 14:55:23
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-30 14:55:24
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@629600d7
+2026-05-30 14:55:24
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-30 14:55:24
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30 14:55:24
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30 14:55:24
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-30 14:55:27
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30 14:55:30
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 14:55:30
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30 14:55:31
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30 14:55:32
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 178f1d66-b341-4847-b6fc-77967e8fb3b5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-30 14:55:32
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30 14:55:34
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Started OrderServiceApplicationTests in 23.613 seconds (process running for 28.117)
+2026-05-30 14:55:36
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30 14:55:36
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-05-30 14:55:36
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-05-31 14:14:00
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-31 14:14:00
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Starting OrderServiceApplicationTests using Java 21.0.6 with PID 19524 (started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-31 14:14:00
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-31 14:14:04
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-31 14:14:04
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 222 ms. Found 2 JPA repository interfaces.
+2026-05-31 14:14:08
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-31 14:14:09
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-31 14:14:12
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-31 14:14:12
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-31 14:14:13
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f4d391c
+2026-05-31 14:14:13
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-31 14:14:13
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-31 14:14:13
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-31 14:14:13
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-31 14:14:17
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-31 14:14:19
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-31 14:14:20
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-31 14:14:20
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-31 14:14:21
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 410870d0-d314-4fde-bee2-5ab86c0bed08
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-31 14:14:21
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-31 14:14:25
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Started OrderServiceApplicationTests in 27.048 seconds (process running for 32.718)
+2026-05-31 14:14:28
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-31 14:14:28
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-05-31 14:14:28
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-05-31 14:57:36
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-05-31 14:57:36
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Starting OrderServiceApplicationTests using Java 21.0.6 with PID 25148 (started by Rutuja in C:\Users\Rutuja\git\smart-tracker\order-service)
+2026-05-31 14:57:36
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - No active profile set, falling back to 1 default profile: "default"
+2026-05-31 14:57:38
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-31 14:57:39
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 337 ms. Found 2 JPA repository interfaces.
+2026-05-31 14:57:41
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-31 14:57:41
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-31 14:57:43
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-31 14:57:44
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-05-31 14:57:44
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6549ce71
+2026-05-31 14:57:44
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-05-31 14:57:44
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-31 14:57:44
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-31 14:57:44
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-31 14:57:48
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-31 14:57:51
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-31 14:57:51
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-31 14:57:52
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-31 14:57:52
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 252964cb-7536-4bc2-8f5a-94ffeb606542
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-31 14:57:53
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-31 14:57:55
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Started OrderServiceApplicationTests in 20.706 seconds (process running for 25.516)
+2026-05-31 14:57:57
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-31 14:57:57
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-05-31 14:57:57
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
