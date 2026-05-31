@@ -15,6 +15,8 @@ A Food Delivery backend system built using Spring Boot Microservices Architectur
 - Lombok
 - Kafka (Upcoming)
 - API Gateway (Upcoming)
+- HikariCP
+- LogBack
 
 ## Completed Features
 
