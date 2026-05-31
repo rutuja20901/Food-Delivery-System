@@ -17,6 +17,9 @@ public class RestaurantRequest {
 	private String cuisineType;
 	
 	private boolean open;
+	
+	@NotBlank(message="Owner Name required")
+	private String ownerName;
 
 	public RestaurantRequest() {
 		super();
@@ -30,6 +33,20 @@ public class RestaurantRequest {
 		this.address = address;
 		this.cuisineType = cuisineType;
 		this.open = open;
+	}
+	
+	
+
+	public RestaurantRequest(@NotBlank(message = "Restaurant name required") String name,
+			@NotBlank(message = "Address required") String address,
+			@NotBlank(message = "Cuisine Type required") String cuisineType, boolean open,
+			@NotBlank(message = "Owner Name required") String ownerName) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.cuisineType = cuisineType;
+		this.open = open;
+		this.ownerName = ownerName;
 	}
 
 	public String getName() {
@@ -62,6 +79,16 @@ public class RestaurantRequest {
 
 	public void setOpen(boolean open) {
 		this.open = open;
+	}
+	
+	
+
+	public String getOwnerName() {
+		return ownerName;
+	}
+
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
 	}
 
 	@Override

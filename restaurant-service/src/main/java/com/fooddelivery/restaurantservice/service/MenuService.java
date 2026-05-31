@@ -23,7 +23,7 @@ public class MenuService {
 	@Autowired
 	private RestaurantRepository restaurantRepo;
 
-	// Add restaurant
+	// Add menu
 	public MenuResponse addMenu(MenuRequest request) {
 		Restaurant restaurant = restaurantRepo.findById(request.getRestaurantId())
 
@@ -42,13 +42,13 @@ public class MenuService {
 		return menuRepo.findAll().stream().map(this::mapToResponse).toList();
 	}
 
-	// Get restaurant by id
+	// Get menu by id
 	public MenuResponse getMenuById(Long id) {
 		Menu menu = menuRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Menu not found!"));
 		return mapToResponse(menu);
 	}
 
-	// Update restaurant by id
+	// Update menu by id
 	public MenuResponse updateMenu(Long id, MenuRequest menu) {
 		Menu res = menuRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Menu Not found!"));
 
@@ -59,7 +59,7 @@ public class MenuService {
 		return mapToResponse(updated);
 	}
 
-	// Delete Restaurant
+	// Delete menu
 
 	public String deleteMenu(Long id) {
 		Menu menu = menuRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Menu Not Found"));

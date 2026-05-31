@@ -3,6 +3,8 @@ package com.fooddelivery.restaurantservice.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import com.fooddelivery.restaurantservice.dto.RestaurantRequest;
@@ -17,13 +19,21 @@ public class RestaurantService {
 	@Autowired
 	private RestaurantRepository restaurantRepo;
 	
-	//Add restaurant 
+	/*
+	 * BUSINESS LOGIC :
+	 * Create new restaurant.
+	 * Set approval status -> PENDING
+	 * Assign restaurant owner.
+	 * Save restaurant details.
+	 */
 	public RestaurantResponse addRestaurant(RestaurantRequest restaurant) {
 		Restaurant res = new Restaurant();
 		res.setName(restaurant.getName());
 		res.setAddress(restaurant.getAddress());
 		res.setCuisineType(restaurant.getCuisineType());
 		res.setOpen(restaurant.isOpen());
+		res.setApprovalStatus("PENDING");
+		res.setOwnerName(restaurant.getOwnerName());
 		Restaurant saved = restaurantRepo.save(res);
 		
 		RestaurantResponse response = new RestaurantResponse();
@@ -36,7 +46,28 @@ public class RestaurantService {
 		return response;
 	}
 	
-	//Get all details
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * PENDING -> APPROVED
+	 * Validate restaurant existence
+	 * Update approval status
+	 */
+	public RestaurantResponse approveRestaurant(Long id) {
+		Restaurant restaurant = restaurantRepo.findById(id).orElseThrow(() -> new RuntimeException("Restaurant not found"));
+		restaurant.setApprovalStatus("APPROVED");
+		restaurantRepo.save(restaurant);
+		return mapToResponse(restaurant);
+	}
+	
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Fetch all approved restaurants.
+	 * Validate available records.
+	 * Map entity -> response DTO.
+	 * Return restaurant list.
+	 */
 	public List<RestaurantResponse> getRestaurant(){
 		return restaurantRepo.findAll()
 				.stream()
@@ -44,14 +75,42 @@ public class RestaurantService {
 				.toList();
 	}
 	
-	// Get restaurant by id
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Validate restaurant existence.
+	 * Fetch restaurant by ID.
+	 * Map entity -> response DTO.
+	 * Return restaurant details.
+	 */
 	public RestaurantResponse getRestaurantById(Long id) {
 		Restaurant restaurant = restaurantRepo.findById(id).orElseThrow(()-> new ResourceNotFoundException("Restaurant not found!"));
 		return mapToResponse(restaurant);
 	}
 	
-	// Update restaurant by id
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Validate restaurant existence.
+	 * Verify restaurant ownership.
+	 * Update restaurant details.
+	 * Save updated restaurant.
+	 */
 	public RestaurantResponse updateRestaurant(Long id, RestaurantRequest restaurant) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		String loggedInUserId = authentication.getName();
+		
+		Restaurant rest =
+                restaurantRepo.findById(id)
+                .orElseThrow(() ->
+                    new ResourceNotFoundException(
+                       "Restaurant Not Found"));
+
+		if(rest.getOwnerName().equals(loggedInUserId)) {
+			throw new ResourceNotFoundException("Unauthorized Access!");
+		}
+		
+		
 		RestaurantResponse res = getRestaurantById(id);
 		
 		res.setName(restaurant.getName());
@@ -62,8 +121,14 @@ public class RestaurantService {
 		return res;
 	}
 	
-	// Delete Restaurant
 	
+	/*
+	 * BUSINESS LOGIC :
+	 * Validate restaurant existence.
+	 * Verify delete authorization.
+	 * Remove restaurant record.
+	 * Return deletion confirmation.
+	 */
 	public String deleteRestaurant(Long id) {
 		 Restaurant menu =
 	                restaurantRepo.findById(id)

@@ -23,7 +23,11 @@ public class Restaurant {
 	private String cuisineType;
 	
 	private boolean open;
+	
+	private String approvalStatus;
 
+	private String ownerName;
+	
 	public Restaurant() {
 		super();
 	}
@@ -35,6 +39,32 @@ public class Restaurant {
 		this.address = address;
 		this.cuisineType = cuisineType;
 		this.open = open;
+	}
+	
+	
+
+	public Restaurant(Long id, String name, String address, String cuisineType, boolean open, String approvalStatus) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.address = address;
+		this.cuisineType = cuisineType;
+		this.open = open;
+		this.approvalStatus = approvalStatus;
+	}
+	
+	
+
+	public Restaurant(Long id, String name, String address, String cuisineType, boolean open, String approvalStatus,
+			String ownerName) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.address = address;
+		this.cuisineType = cuisineType;
+		this.open = open;
+		this.approvalStatus = approvalStatus;
+		this.ownerName = ownerName;
 	}
 
 	public Long getId() {
@@ -75,6 +105,25 @@ public class Restaurant {
 
 	public void setOpen(boolean open) {
 		this.open = open;
+	}
+	
+	
+
+	public String getApprovalStatus() {
+		return approvalStatus;
+	}
+
+	public void setApprovalStatus(String approvalStatus) {
+		this.approvalStatus = approvalStatus;
+	}
+	
+
+	public String getOwnerName() {
+		return ownerName;
+	}
+
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
 	}
 
 	@Override
