@@ -1,32 +1,37 @@
 package com.fooddelivery.restaurantservice.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 public class SecurityConfig {
+	@Autowired
+	private JwtFilter jwtFilter;
+	
 	@Bean
     public SecurityFilterChain
     securityFilterChain(
             HttpSecurity http)
             throws Exception {
-
+		System.out.println("restaurant security is running");
         http
         .csrf(csrf -> csrf.disable())
 
         .authorizeHttpRequests(auth -> auth
 
-        .requestMatchers("/restaurant").hasRole("RESTAURANT_OWNER")
+        .requestMatchers(HttpMethod.POST,"/restaurant").hasRole("RESTAURANT_OWNER")
         .requestMatchers("/restaurant/*/approve").hasRole("ADMIN")
-        .requestMatchers(HttpMethod.GET,"/restaurants").hasAnyRole("CUSTOMER","ADMIN","RESTAURANT_OWNER")
-        .requestMatchers(HttpMethod.GET,"/restaurants/**").hasAnyRole("CUSTOMER","ADMIN","RESTAURANT_OWNER")
-        .requestMatchers(HttpMethod.PUT,"/restaurants/**").hasAnyRole("ADMIN","RESTAURANT_OWNER")
-        .requestMatchers(HttpMethod.DELETE,"/restaurants").hasAnyRole("ADMIN")
+        .requestMatchers(HttpMethod.GET,"/restaurant").hasAnyRole("CUSTOMER","ADMIN","RESTAURANT_OWNER")
+        .requestMatchers(HttpMethod.GET,"/restaurant/**").hasAnyRole("CUSTOMER","ADMIN","RESTAURANT_OWNER")
+        .requestMatchers(HttpMethod.PUT,"/restaurant/**").hasAnyRole("ADMIN","RESTAURANT_OWNER")
+        .requestMatchers(HttpMethod.DELETE,"/restaurant").hasAnyRole("ADMIN")
         .anyRequest()
-        .authenticated());
+        .authenticated()).addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
 	}

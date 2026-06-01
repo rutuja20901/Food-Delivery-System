@@ -14,6 +14,8 @@ public class RestaurantResponse {
 	private String cuisineType;
 	
 	private boolean open;
+	
+	
 
 	public RestaurantResponse() {
 		super();

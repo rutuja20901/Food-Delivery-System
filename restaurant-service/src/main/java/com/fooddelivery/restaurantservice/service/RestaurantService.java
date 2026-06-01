@@ -36,12 +36,14 @@ public class RestaurantService {
 		res.setOwnerName(restaurant.getOwnerName());
 		Restaurant saved = restaurantRepo.save(res);
 		
+		//Response for create Restaurant
 		RestaurantResponse response = new RestaurantResponse();
 		
 		response.setName(saved.getName());
 		response.setAddress(saved.getAddress());
 		response.setCuisineType(saved.getCuisineType());
 		response.setOpen(saved.isOpen());
+		
 		
 		return response;
 	}

@@ -24,7 +24,7 @@ spring:
             - id: restaurant-service
               uri: http://localhost:8082
               predicates:
-                - Path=/restaurants/**
+                - Path=/restaurant/**
 
             - id: payment-service
               uri: http://localhost:8083
