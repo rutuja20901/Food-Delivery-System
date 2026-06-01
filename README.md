@@ -38,4 +38,5 @@ A Food Delivery backend system built using Spring Boot Microservices Architectur
 - Order Service
 - API Gateway
 - Notification Service (Kafka)
-- Delivery Service
+- Payment Service
+- User Service
