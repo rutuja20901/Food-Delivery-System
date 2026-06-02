@@ -1,62 +1,46 @@
 package com.fooddelivery.userservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fooddelivery.userservice.dto.LoginRequest;
-import com.fooddelivery.userservice.dto.LoginResponse;
-import com.fooddelivery.userservice.dto.RegisterRequest;
+import com.fooddelivery.userservice.dto.ChangePasswordRequest;
+import com.fooddelivery.userservice.dto.UpdateProfileRequest;
+import com.fooddelivery.userservice.dto.UserProfileResponse;
 import com.fooddelivery.userservice.service.UserService;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/users")
 public class UserController {
-
+	
 	@Autowired
 	private UserService userService;
 	
-	@PostMapping("/register")
-    public String register(
-            @RequestBody RegisterRequest request) {
-
-        return userService.registerUser(request);
-    }
-	
-	
-	@PostMapping("/login")
-	public LoginResponse login(
-	        @RequestBody LoginRequest request) {
-
-	    return userService.login(request);
-
-	}
-	
 	
 	@GetMapping("/profile")
-	public String profile(){
-
-	    return "Protected API Success";
+	public ResponseEntity<UserProfileResponse> userProfile() {
+		return ResponseEntity.ok(userService.userProfile());
 	}
 	
-	@GetMapping("/customer")
-	public String customer() {
-		return "Customer entry only";
+	@PutMapping("/profile")
+	public ResponseEntity<UserProfileResponse> updateProfile(@Valid @RequestBody UpdateProfileRequest request){
+		return ResponseEntity.ok(userService.updateProfile(request));
 	}
 	
-	@GetMapping("/admin")
-	public String admin() {
-		return "Admin entry only";
+	@PutMapping("/change-password")
+	public String changePassword(@Valid @RequestBody ChangePasswordRequest request){
+		return userService.changePassword(request);
 	}
 	
-	@GetMapping("/restaurant")
-	public String restaurant() {
-		return "Restaurant entry only";
+	@DeleteMapping("/{id}")
+	public String deleteProfile(Long id){
+		return userService.deleteProfile(id);
 	}
-	
-	
-	
 }

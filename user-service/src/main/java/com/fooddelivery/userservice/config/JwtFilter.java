@@ -38,6 +38,7 @@ public class JwtFilter extends GenericFilter{
         HttpServletRequest req =
                 (HttpServletRequest) request;
 
+        
         String header =
                 req.getHeader("Authorization");
 
@@ -45,6 +46,7 @@ public class JwtFilter extends GenericFilter{
                 header.startsWith("Bearer ")){
         	String token =
                     header.substring(7);
+        	
 
             if(jwtUtil.validateToken(token)){
 
@@ -52,7 +54,7 @@ public class JwtFilter extends GenericFilter{
                         jwtUtil.extractUsername(
                                 token);
                 String role = jwtUtil.extractRole(token);
-
+                
                 UsernamePasswordAuthenticationToken auth =
                         new UsernamePasswordAuthenticationToken(
                                 email,
@@ -60,6 +62,8 @@ public class JwtFilter extends GenericFilter{
                                 List.of(
                                 		new SimpleGrantedAuthority("ROLE_" + role)));
 
+                
+                
                 auth.setDetails(
                         new WebAuthenticationDetailsSource()
                                 .buildDetails(req));

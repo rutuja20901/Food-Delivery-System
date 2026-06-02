@@ -68,11 +68,11 @@ public class JwtUtil {
 	                    .setSigningKey(key())
 	                    .build()
 	                    .parseClaimsJws(token);
-
+	            System.out.println("True");
 	            return true;
 
 	        }catch(Exception e){
-
+	        	 System.out.println("false" + e.getMessage());
 	            return false;
 	        }
 	    }

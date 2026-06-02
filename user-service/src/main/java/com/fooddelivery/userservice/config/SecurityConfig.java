@@ -28,11 +28,10 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/users/register","/users/login")
+                .requestMatchers("/auth/register","/auth/login")
                 .permitAll()
-                .requestMatchers("/customer/**").hasRole("CUSTOMER")
-                .requestMatchers("/admin/**").hasRole("ADMIN")
-                .requestMatchers("/restaurant/**").hasRole("RESTAURANT_OWNER")
+                .requestMatchers("/users/**")
+                .hasRole("CUSTOMER")
                 .anyRequest()
                 .authenticated()
             ).addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);

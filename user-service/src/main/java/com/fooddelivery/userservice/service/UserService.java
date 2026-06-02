@@ -1,73 +1,79 @@
 package com.fooddelivery.userservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.fooddelivery.userservice.dto.LoginRequest;
-import com.fooddelivery.userservice.dto.LoginResponse;
-import com.fooddelivery.userservice.dto.RegisterRequest;
+import com.fooddelivery.userservice.dto.ChangePasswordRequest;
+import com.fooddelivery.userservice.dto.UpdateProfileRequest;
+import com.fooddelivery.userservice.dto.UserProfileResponse;
 import com.fooddelivery.userservice.entity.User;
 import com.fooddelivery.userservice.repository.UserRepository;
-import com.fooddelivery.userservice.util.JwtUtil;
 
 @Service
 public class UserService {
 
+	/*
+	 * users APIs: GET /users/profile - done PUT /users/profile PUT
+	 * /users/change-password DELETE /users/account
+	 */
+	@Autowired
+	private UserRepository userRepository;
+	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
-	
-	@Autowired
-	private UserRepository userRepo;
-	
-	@Autowired
-	private JwtUtil jwtUtil;
-	
-	public String registerUser(RegisterRequest request) {
-		if(userRepo.findByEmail(request.getEmail()).isPresent()){
-			return "User Already Exists!";
+
+	public UserProfileResponse userProfile() {
+		String email = SecurityContextHolder.getContext().getAuthentication().getName();
+
+		User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User Not Found!"));
+		UserProfileResponse response = new UserProfileResponse();
+		response.setId(user.getId());
+		response.setName(user.getName());
+		response.setEmail(user.getEmail());
+		response.setPhone(user.getPhone());
+		response.setRole(user.getRole());
+		return response;
+
+	}
+
+	public UserProfileResponse updateProfile(UpdateProfileRequest request) {
+		String email = SecurityContextHolder.getContext().getAuthentication().getName();
+
+		User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User Not Found!"));
+		user.setEmail(request.getEmail());
+		user.setName(request.getName());
+		user.setPhone(request.getPhone());
+		User updatedProfile = userRepository.save(user);
+
+		UserProfileResponse response = new UserProfileResponse();
+		response.setId(user.getId());
+		response.setRole(user.getRole());
+		response.setEmail(updatedProfile.getEmail());
+		response.setName(updatedProfile.getName());
+		response.setPhone(updatedProfile.getPhone());
+
+		return response;
+	}
+
+	public String changePassword(ChangePasswordRequest request) {
+		String email = SecurityContextHolder.getContext().getAuthentication().getName();
+		User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User is not found!"));
+		
+		boolean matches = passwordEncoder.matches(request.getNewPassword(), request.getOldPassword());
+		if(!matches) {
+			throw new RuntimeException("Passwords are not matched!");
 		}
 		
-		User user = new User();
-
-		user.setName(request.getName());
-		user.setEmail(request.getEmail());
-		user.setPassword(
-		        passwordEncoder.encode(request.getPassword()));
-		user.setRole(request.getRole());
-		user.setAddress(request.getAddress());
-		user.setPhone(request.getPhone());
-
-        userRepo.save(user);
-
-        return "User Registered Successfully";
+		user.setPassword(passwordEncoder.encode(request.getNewPassword()));
+		return "Password Change Successfully!";
 	}
 	
 	
-	public LoginResponse login(
-	        LoginRequest request) {
-
-	    User user =
-	    		userRepo.findByEmail(
-	                    request.getEmail())
-	            .orElseThrow(() ->
-	                    new RuntimeException(
-	                            "User not found"));
-
-	    if(!passwordEncoder.matches(
-	            request.getPassword(),
-	            user.getPassword())) {
-
-	        throw new RuntimeException(
-	                "Invalid Password");
-	    }
-
-	    String token =
-	            jwtUtil.generateToken(
-	                    user.getEmail(),user.getRole());
-
-	    return new LoginResponse(token);
-
+	public String deleteProfile(Long id) {
+		User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User is not found!"));
+		userRepository.delete(user);
+		return "User Deleted Successfully";
 	}
-	
 }
