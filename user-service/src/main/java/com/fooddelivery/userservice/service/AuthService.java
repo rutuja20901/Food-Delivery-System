@@ -8,6 +8,7 @@ import com.fooddelivery.userservice.dto.LoginRequest;
 import com.fooddelivery.userservice.dto.LoginResponse;
 import com.fooddelivery.userservice.dto.RegisterRequest;
 import com.fooddelivery.userservice.entity.User;
+import com.fooddelivery.userservice.enums.UserStatus;
 import com.fooddelivery.userservice.repository.AuthRepository;
 import com.fooddelivery.userservice.util.JwtUtil;
 
@@ -44,7 +45,7 @@ public class AuthService {
 		user.setRole(request.getRole());
 		user.setAddress(request.getAddress());
 		user.setPhone(request.getPhone());
-
+		user.setUserStatus(UserStatus.ACTIVE);;
         userRepo.save(user);
 
         return "User Registered Successfully";

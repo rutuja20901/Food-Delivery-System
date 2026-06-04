@@ -10,37 +10,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fooddelivery.userservice.dto.ChangePasswordRequest;
-import com.fooddelivery.userservice.dto.UpdateProfileRequest;
 import com.fooddelivery.userservice.dto.GetProfileResponse;
-import com.fooddelivery.userservice.service.UserService;
+import com.fooddelivery.userservice.dto.UpdateOwnerProfileResponse;
+import com.fooddelivery.userservice.dto.UpdateProfileRequest;
+import com.fooddelivery.userservice.service.OwnerService;
 
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/users")
-public class UserController {
+@RequestMapping("/owners")
+public class OwnerController {
 	
 	@Autowired
-	private UserService userService;
+	private OwnerService ownerService;
 	
 	
 	@GetMapping("/profile")
-	public ResponseEntity<GetProfileResponse> userProfile() {
-		return ResponseEntity.ok(userService.userProfile());
+	public ResponseEntity<GetProfileResponse> ownerProfile() {
+		return ResponseEntity.ok(ownerService.ownerProfile());
 	}
 	
 	@PutMapping("/profile")
-	public ResponseEntity<GetProfileResponse> updateProfile(@Valid @RequestBody UpdateProfileRequest request){
-		return ResponseEntity.ok(userService.updateProfile(request));
+	public ResponseEntity<UpdateOwnerProfileResponse> updateProfile(@Valid @RequestBody UpdateProfileRequest request){
+		return ResponseEntity.ok(ownerService.updateProfile(request));
 	}
 	
 	@PutMapping("/change-password")
 	public String changePassword(@Valid @RequestBody ChangePasswordRequest request){
-		return userService.changePassword(request);
+		return ownerService.changePassword(request);
 	}
 	
 	@DeleteMapping("/{id}")
 	public String deleteProfile(Long id){
-		return userService.deleteProfile(id);
+		return ownerService.deleteProfile(id);
 	}
 }
+

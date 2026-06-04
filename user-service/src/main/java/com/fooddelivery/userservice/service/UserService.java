@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.fooddelivery.userservice.dto.ChangePasswordRequest;
 import com.fooddelivery.userservice.dto.UpdateProfileRequest;
-import com.fooddelivery.userservice.dto.UserProfileResponse;
+import com.fooddelivery.userservice.dto.GetProfileResponse;
 import com.fooddelivery.userservice.entity.User;
 import com.fooddelivery.userservice.repository.UserRepository;
 
@@ -24,11 +24,11 @@ public class UserService {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
-	public UserProfileResponse userProfile() {
+	public GetProfileResponse userProfile() {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
 
 		User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User Not Found!"));
-		UserProfileResponse response = new UserProfileResponse();
+		GetProfileResponse response = new GetProfileResponse();
 		response.setId(user.getId());
 		response.setName(user.getName());
 		response.setEmail(user.getEmail());
@@ -38,7 +38,7 @@ public class UserService {
 
 	}
 
-	public UserProfileResponse updateProfile(UpdateProfileRequest request) {
+	public GetProfileResponse updateProfile(UpdateProfileRequest request) {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
 
 		User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User Not Found!"));
@@ -47,7 +47,7 @@ public class UserService {
 		user.setPhone(request.getPhone());
 		User updatedProfile = userRepository.save(user);
 
-		UserProfileResponse response = new UserProfileResponse();
+		GetProfileResponse response = new GetProfileResponse();
 		response.setId(user.getId());
 		response.setRole(user.getRole());
 		response.setEmail(updatedProfile.getEmail());

@@ -1,6 +1,6 @@
 package com.fooddelivery.userservice.dto;
 
-public class UserProfileResponse {
+public class GetProfileResponse {
 
 	private Long id;
 	
@@ -12,11 +12,11 @@ public class UserProfileResponse {
 	
 	private String role;
 
-	public UserProfileResponse() {
+	public GetProfileResponse() {
 		super();
 	}
 
-	public UserProfileResponse(Long id, String name, String email, String phone, String role) {
+	public GetProfileResponse(Long id, String name, String email, String phone, String role) {
 		super();
 		this.id = id;
 		this.name = name;

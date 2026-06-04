@@ -1,7 +1,11 @@
 package com.fooddelivery.userservice.entity;
 
+import com.fooddelivery.userservice.enums.UserStatus;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,6 +32,9 @@ public class User {
 	private String address;
 	
 	private String phone;
+	
+	@Enumerated(EnumType.STRING)
+	private UserStatus userStatus;
 
 	public User() {
 		super();
@@ -42,6 +49,21 @@ public class User {
 		this.role = role;
 		this.address = address;
 		this.phone = phone;
+	}
+	
+	
+
+	public User(Long id, String name, String email, String password, String role, String address, String phone,
+			UserStatus userStatus) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.role = role;
+		this.address = address;
+		this.phone = phone;
+		this.userStatus = userStatus;
 	}
 
 	public Long getId() {
@@ -98,6 +120,16 @@ public class User {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+	
+	
+
+	public UserStatus getUserStatus() {
+		return userStatus;
+	}
+
+	public void setUserStatus(UserStatus userStatus) {
+		this.userStatus = userStatus;
 	}
 
 	@Override
