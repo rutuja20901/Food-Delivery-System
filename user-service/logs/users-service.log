@@ -3341,3 +3341,832 @@ java.lang.NullPointerException: Cannot invoke "com.fooddelivery.userservice.enum
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 20:56:03
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-05 20:56:03
+                INFO 
+                c.f.u.UserServiceApplication
+                - Starting UserServiceApplication using Java 21.0.6 with PID 17288 (C:\Users\Rutuja\git\Food-Delivery-System\user-service\target\classes started by Rutuja in C:\Users\Rutuja\git\Food-Delivery-System\user-service)
+2026-06-05 20:56:03
+                INFO 
+                c.f.u.UserServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-05 20:56:06
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-05 20:56:07
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 171 ms. Found 4 JPA repository interfaces.
+2026-06-05 20:56:09
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8081 (http)
+2026-06-05 20:56:09
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-05 20:56:09
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-06-05 20:56:09
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-05 20:56:09
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 5882 ms
+2026-06-05 20:56:10
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-05 20:56:11
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-05 20:56:13
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-05 20:56:13
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-06-05 20:56:13
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4805069b
+2026-06-05 20:56:13
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-06-05 20:56:14
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-05 20:56:14
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-05 20:56:14
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-05 20:56:16
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-05 20:56:17
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 20:56:17
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-05 20:56:18
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-05 20:56:18
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 0bf6fa35-b2a5-43c9-bfef-52892f9baf18
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-05 20:56:18
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-05 20:56:20
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-05 20:56:21
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8081 (http) with context path '/'
+2026-06-05 20:56:21
+                INFO 
+                c.f.u.UserServiceApplication
+                - Started UserServiceApplication in 19.579 seconds (process running for 21.565)
+2026-06-05 21:02:55
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-05 21:02:55
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-06-05 21:02:55
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 46 ms
+2026-06-05 21:11:05
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-05 21:11:05
+                INFO 
+                c.f.u.UserServiceApplication
+                - Starting UserServiceApplication using Java 21.0.6 with PID 21132 (C:\Users\Rutuja\git\Food-Delivery-System\user-service\target\classes started by Rutuja in C:\Users\Rutuja\git\Food-Delivery-System\user-service)
+2026-06-05 21:11:05
+                INFO 
+                c.f.u.UserServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-05 21:11:08
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-05 21:11:09
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 189 ms. Found 4 JPA repository interfaces.
+2026-06-05 21:11:11
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8081 (http)
+2026-06-05 21:11:11
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-05 21:11:11
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-06-05 21:11:11
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-05 21:11:11
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 5495 ms
+2026-06-05 21:11:12
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-05 21:11:12
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-05 21:11:14
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-05 21:11:14
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-06-05 21:11:15
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4805069b
+2026-06-05 21:11:15
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-06-05 21:11:15
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-05 21:11:15
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-05 21:11:15
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-05 21:11:18
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-05 21:11:18
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 21:11:19
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-05 21:11:19
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-05 21:11:20
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: d3fd3569-eb36-4b49-b560-79ec7b3456b0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-05 21:11:20
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-05 21:11:22
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-05 21:11:22
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8081 (http) with context path '/'
+2026-06-05 21:11:22
+                INFO 
+                c.f.u.UserServiceApplication
+                - Started UserServiceApplication in 18.521 seconds (process running for 20.368)
+2026-06-05 21:12:31
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-05 21:12:31
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-06-05 21:12:31
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 7 ms
+2026-06-05 21:13:32
+                ERROR
+                o.a.c.c.C.[.[.[.[dispatcherServlet]
+                - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null] with root cause
+java.lang.IllegalArgumentException: The given id must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:182)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById(SimpleJpaRepository.java:330)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222)
+	at jdk.proxy2/jdk.proxy2.$Proxy138.findById(Unknown Source)
+	at com.fooddelivery.userservice.service.UserService.deleteProfile(UserService.java:75)
+	at com.fooddelivery.userservice.controller.UserController.deleteProfile(UserController.java:44)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:651)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at com.fooddelivery.userservice.config.JwtFilter.doFilter(JwtFilter.java:78)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:376)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at com.fooddelivery.userservice.config.JwtFilter.doFilter(JwtFilter.java:78)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 21:16:25
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-05 21:16:25
+                INFO 
+                c.f.u.UserServiceApplication
+                - Starting UserServiceApplication using Java 21.0.6 with PID 17400 (C:\Users\Rutuja\git\Food-Delivery-System\user-service\target\classes started by Rutuja in C:\Users\Rutuja\git\Food-Delivery-System\user-service)
+2026-06-05 21:16:25
+                INFO 
+                c.f.u.UserServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-05 21:16:28
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-05 21:16:29
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 183 ms. Found 4 JPA repository interfaces.
+2026-06-05 21:16:31
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8081 (http)
+2026-06-05 21:16:31
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-05 21:16:31
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-06-05 21:16:31
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-05 21:16:31
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 5433 ms
+2026-06-05 21:16:32
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-05 21:16:32
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-05 21:16:35
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-05 21:16:35
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-06-05 21:16:36
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20914835
+2026-06-05 21:16:36
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-06-05 21:16:36
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-05 21:16:36
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-05 21:16:36
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-05 21:16:39
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-05 21:16:39
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 21:16:40
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-05 21:16:40
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-05 21:16:41
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: df7e4197-6cd2-4fce-b7d2-dbae636f3cfe
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-05 21:16:41
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-05 21:16:43
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-05 21:16:43
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8081 (http) with context path '/'
+2026-06-05 21:16:43
+                INFO 
+                c.f.u.UserServiceApplication
+                - Started UserServiceApplication in 19.597 seconds (process running for 21.555)
+2026-06-05 21:17:59
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-05 21:17:59
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-06-05 21:17:59
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 8 ms
+2026-06-05 21:28:02
+                WARN 
+                o.s.w.s.m.s.DefaultHandlerExceptionResolver
+                - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-06-05 21:30:48
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-05 21:30:48
+                INFO 
+                c.f.u.UserServiceApplication
+                - Starting UserServiceApplication using Java 21.0.6 with PID 2096 (C:\Users\Rutuja\git\Food-Delivery-System\user-service\target\classes started by Rutuja in C:\Users\Rutuja\git\Food-Delivery-System\user-service)
+2026-06-05 21:30:48
+                INFO 
+                c.f.u.UserServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-05 21:30:51
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-05 21:30:51
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 167 ms. Found 4 JPA repository interfaces.
+2026-06-05 21:30:53
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8081 (http)
+2026-06-05 21:30:53
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-05 21:30:53
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-06-05 21:30:53
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-05 21:30:54
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 5361 ms
+2026-06-05 21:30:54
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-05 21:30:55
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-05 21:30:56
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-05 21:30:57
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-06-05 21:30:58
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4805069b
+2026-06-05 21:30:58
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-06-05 21:30:58
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-05 21:30:58
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-05 21:30:58
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-05 21:31:00
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-05 21:31:01
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 21:31:01
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-05 21:31:02
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-05 21:31:02
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: d8f86fb3-37d3-47bf-b4b9-aa31e063c70d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-05 21:31:02
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-05 21:31:04
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-05 21:31:05
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8081 (http) with context path '/'
+2026-06-05 21:31:05
+                INFO 
+                c.f.u.UserServiceApplication
+                - Started UserServiceApplication in 18.432 seconds (process running for 20.22)
+2026-06-05 21:31:22
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-05 21:31:22
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-06-05 21:31:22
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 7 ms
+2026-06-05 21:31:22
+                WARN 
+                o.s.w.s.m.s.DefaultHandlerExceptionResolver
+                - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-06-05 21:36:10
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 9.0.1.Final
+2026-06-05 21:36:11
+                INFO 
+                c.f.u.UserServiceApplication
+                - Starting UserServiceApplication using Java 21.0.6 with PID 12728 (C:\Users\Rutuja\git\Food-Delivery-System\user-service\target\classes started by Rutuja in C:\Users\Rutuja\git\Food-Delivery-System\user-service)
+2026-06-05 21:36:11
+                INFO 
+                c.f.u.UserServiceApplication
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-05 21:36:13
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-05 21:36:13
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 231 ms. Found 4 JPA repository interfaces.
+2026-06-05 21:36:16
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat initialized with port 8081 (http)
+2026-06-05 21:36:16
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-05 21:36:16
+                INFO 
+                o.a.catalina.core.StandardService
+                - Starting service [Tomcat]
+2026-06-05 21:36:16
+                INFO 
+                o.a.catalina.core.StandardEngine
+                - Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-05 21:36:16
+                INFO 
+                o.s.b.w.c.s.WebApplicationContextInitializer
+                - Root WebApplicationContext: initialization completed in 5258 ms
+2026-06-05 21:36:17
+                INFO 
+                org.hibernate.orm.jpa
+                - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-05 21:36:17
+                INFO 
+                org.hibernate.orm.core
+                - HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-05 21:36:19
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-05 21:36:19
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-06-05 21:36:20
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20914835
+2026-06-05 21:36:20
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-06-05 21:36:20
+                WARN 
+                org.hibernate.orm.core
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-05 21:36:20
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-05 21:36:20
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/food_delivery]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: food_delivery/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-05 21:36:22
+                INFO 
+                org.hibernate.orm.core
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-05 21:36:23
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 21:36:23
+                INFO 
+                o.s.d.j.r.q.QueryEnhancerFactories
+                - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-05 21:36:24
+                WARN 
+                o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-05 21:36:24
+                WARN 
+                o.s.b.s.a.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: f0539a5e-bd66-4c54-878a-b0f52299bf36
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-05 21:36:24
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-05 21:36:26
+                INFO 
+                o.a.coyote.http11.Http11NioProtocol
+                - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-05 21:36:26
+                INFO 
+                o.s.boot.tomcat.TomcatWebServer
+                - Tomcat started on port 8081 (http) with context path '/'
+2026-06-05 21:36:26
+                INFO 
+                c.f.u.UserServiceApplication
+                - Started UserServiceApplication in 17.711 seconds (process running for 19.423)
+2026-06-05 21:36:43
+                INFO 
+                o.a.c.c.C.[Tomcat].[localhost].[/]
+                - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-05 21:36:43
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Initializing Servlet 'dispatcherServlet'
+2026-06-05 21:36:43
+                INFO 
+                o.s.web.servlet.DispatcherServlet
+                - Completed initialization in 8 ms
