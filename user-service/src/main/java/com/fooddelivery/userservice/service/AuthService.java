@@ -6,9 +6,11 @@ import org.springframework.stereotype.Service;
 
 import com.fooddelivery.userservice.dto.LoginRequest;
 import com.fooddelivery.userservice.dto.LoginResponse;
+import com.fooddelivery.userservice.dto.NotificationEvent;
 import com.fooddelivery.userservice.dto.RegisterRequest;
 import com.fooddelivery.userservice.entity.User;
 import com.fooddelivery.userservice.enums.UserStatus;
+import com.fooddelivery.userservice.producer.NotificationProducer;
 import com.fooddelivery.userservice.repository.AuthRepository;
 import com.fooddelivery.userservice.util.JwtUtil;
 
@@ -23,6 +25,9 @@ public class AuthService {
 	
 	@Autowired
 	private JwtUtil jwtUtil;
+	
+	@Autowired
+	private NotificationProducer producer;
 	
 	/*
 	 * BUSINESS LOGIC :
@@ -46,7 +51,14 @@ public class AuthService {
 		user.setAddress(request.getAddress());
 		user.setPhone(request.getPhone());
 		user.setUserStatus(UserStatus.ACTIVE);;
-        userRepo.save(user);
+       User savedUser =  userRepo.save(user);
+        
+        NotificationEvent event = new NotificationEvent(
+        		savedUser.getId(),
+        		"Registration Successfull",
+        		"Welcome to Food Delivery App");
+        
+        producer.sendNotification(event);
 
         return "User Registered Successfully";
 	}
