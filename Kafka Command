@@ -1,0 +1,67 @@
+### KAFKA COMMAND USED IN PROJECT ###
+
+1. Generate Cluster ID (KRaft Mode)
+    Used once when setting up Kafka.
+    bin\windows\kafka-storage.bat random-uuid
+
+2. Format Kafka Storage
+    Used only the first time (or after deleting KafkaData).
+    bin\windows\kafka-storage.bat format -t CLUSTER_ID -c config\kraft\server.properties
+
+3. Start Kafka Broker
+    bin\windows\kafka-server-start.bat config\kraft\server.properties
+    Purpose:
+    Starts Kafka
+    Opens port 9092
+    Loads topics and offsets
+
+4. Create Topic
+    bin\windows\kafka-topics.bat --create --topic notification-topic --bootstrap-server localhost:9092
+
+5. List Topics
+    bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+
+6. Describe Topic
+    Shows partitions, replicas, offsets.
+    bin\windows\kafka-topics.bat --describe --topic notification-topic --bootstrap-server localhost:9092
+
+7. Delete Topic
+    bin\windows\kafka-topics.bat --delete --topic notification-topic --bootstrap-server localhost:9092
+
+8. Start Console Producer
+    Send messages manually.
+    bin\windows\kafka-console-producer.bat --topic notification-topic --bootstrap-server localhost:9092
+    Then type:
+    {"userId":1,"title":"Welcome","message":"Welcome"}
+
+9. Start Console Consumer
+    Read messages manually.
+    bin\windows\kafka-console-consumer.bat --topic notification-topic --from-beginning --bootstrap-server localhost:9092
+
+10. Read Only New Messages
+    bin\windows\kafka-console-consumer.bat --topic notification-topic --bootstrap-server localhost:9092
+
+11. Show Consumer Groups
+    bin\windows\kafka-consumer-groups.bat --list --bootstrap-server localhost:9092
+
+12. Describe Consumer Group
+    Very important for interviews.
+    bin\windows\kafka-consumer-groups.bat --describe --group notification-group --bootstrap-server localhost:9092
+    Shows:
+    TOPIC
+    PARTITION
+    CURRENT-OFFSET
+    LOG-END-OFFSET
+    LAG
+
+13. Reset Consumer Offset
+    Move consumer to beginning.
+    bin\windows\kafka-consumer-groups.bat ^
+    --group notification-group --topic notification-topic --reset-offsets --to-earliest --execute --bootstrap-server localhost:9092
+
+14. Check Broker API Versions
+    bin\windows\kafka-broker-api-versions.bat --bootstrap-server localhost:9092
+
+15. Check Metadata Quorum (KRaft)
+    Useful in KRaft mode.
+    bin\windows\kafka-metadata-quorum.bat --bootstrap-server localhost:9092 describe --status
