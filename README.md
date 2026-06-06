@@ -13,10 +13,11 @@ A Food Delivery backend system built using Spring Boot Microservices Architectur
 - Spring Data JPA
 - MySQL
 - Lombok
-- Kafka (Upcoming)
-- API Gateway (Upcoming)
+- Kafka 
+- API Gateway 
 - HikariCP
 - LogBack
+
 
 ## Completed Features
 
