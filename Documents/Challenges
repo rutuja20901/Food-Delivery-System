@@ -1,0 +1,30 @@
+### Challenge Faced During Microservices Development
+
+1. While implementing the Order Creation flow, I integrated Order Service with Restaurant Service and Menu Service using REST API communication through RestTemplate.
+
+**Issue:**
+The Order Service was successfully calling the Restaurant Service APIs, but the JWT Authorization token received from the client request was not automatically forwarded to downstream services. Because of this, Restaurant Service returned a **403 Forbidden** response when Order Service tried to access secured endpoints.
+
+**Root Cause:**
+In a microservices architecture, HTTP headers from the incoming request are not automatically propagated during service-to-service communication. The Authorization header containing the JWT token must be explicitly forwarded.
+
+**Solution Implemented:**
+
+1. Extracted the Authorization header from the incoming request in Order Service.
+2. Created HttpHeaders and added the JWT token.
+3. Used RestTemplate with HttpEntity to send the Authorization header to Restaurant Service and Menu Service.
+4. Verified token validation in downstream services through existing JWT filters.
+
+**Learning:**
+This helped me understand authentication propagation in microservices and the importance of securely forwarding user context between services.
+
+**Production-Level Approach:**
+In enterprise applications, this is typically handled using:
+
+* API Gateway
+* Spring Cloud Gateway
+* Feign Client Interceptors
+* OAuth2 Token Relay
+* Service-to-Service Authentication mechanisms
+
+This avoids manually passing JWT tokens in every service call and provides centralized security management.
