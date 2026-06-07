@@ -1,0 +1,9 @@
+### MYSQL COMMAND USED IN PROJECT ###
+
+1. Start mysql using xampp
+  Apache 
+  Mysql
+
+2. check DB data
+  xampp/mysql/bin cmd
+  mysql -u root
