@@ -18,13 +18,3 @@ In a microservices architecture, HTTP headers from the incoming request are not 
 **Learning:**
 This helped me understand authentication propagation in microservices and the importance of securely forwarding user context between services.
 
-**Production-Level Approach:**
-In enterprise applications, this is typically handled using:
-
-* API Gateway
-* Spring Cloud Gateway
-* Feign Client Interceptors
-* OAuth2 Token Relay
-* Service-to-Service Authentication mechanisms
-
-This avoids manually passing JWT tokens in every service call and provides centralized security management.
