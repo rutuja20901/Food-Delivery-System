@@ -23,13 +23,14 @@ public class SecurityConfig {
         .csrf(csrf -> csrf.disable())
 
         .authorizeHttpRequests(auth -> auth
-
+        .requestMatchers("/restaurant/internal/**").permitAll()
         .requestMatchers(HttpMethod.POST,"/restaurant").hasRole("RESTAURANT_OWNER")
         .requestMatchers("/restaurant/*/approve").hasRole("ADMIN")
         .requestMatchers(HttpMethod.GET,"/restaurant").hasAnyRole("CUSTOMER","ADMIN","RESTAURANT_OWNER")
         .requestMatchers(HttpMethod.GET,"/restaurant/**").hasAnyRole("CUSTOMER","ADMIN","RESTAURANT_OWNER")
         .requestMatchers(HttpMethod.PUT,"/restaurant/**").hasAnyRole("ADMIN","RESTAURANT_OWNER")
         .requestMatchers(HttpMethod.DELETE,"/restaurant").hasAnyRole("ADMIN")
+        .requestMatchers("/menu/**").permitAll()
         .anyRequest()
         .authenticated()).addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 

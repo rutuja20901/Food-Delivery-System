@@ -31,10 +31,11 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests(auth->auth
 
-                      
+                		.requestMatchers("/auth/**","/restaurant/**","/menu/**")
+                        .permitAll()
                         .requestMatchers("/orders/**")
                         .hasAnyRole("ADMIN","CUSTOMER")
-
+                        
                         .anyRequest()
                         .authenticated()
                 )

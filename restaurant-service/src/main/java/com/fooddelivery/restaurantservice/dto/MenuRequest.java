@@ -1,6 +1,7 @@
 package com.fooddelivery.restaurantservice.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -9,12 +10,12 @@ public class MenuRequest {
 	@NotBlank(message="Item name required")
 	private String itemName;
 	
-	@NotBlank(message="Price required")
+	@NotNull(message="Price required")
 	private double price;
 	
 	private boolean available;
 	
-	@NotBlank(message="Restaurant Id required")
+	@NotNull(message="Restaurant Id required")
 	private Long restaurantId;
 
 	public MenuRequest() {

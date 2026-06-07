@@ -37,6 +37,7 @@ public class JwtFilter
         String authHeader =
                 request.getHeader(
                     "Authorization");
+        System.out.println("authheader for restaurant: " + authHeader);
 
         if(authHeader != null
                 && authHeader.startsWith(

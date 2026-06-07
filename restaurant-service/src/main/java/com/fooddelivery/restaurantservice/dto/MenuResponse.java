@@ -14,6 +14,8 @@ public class MenuResponse {
 	private boolean open;
 	
 	private String restaurantName;
+	
+	private Long restaurantId;
 
 	public MenuResponse() {
 		super();
@@ -26,6 +28,19 @@ public class MenuResponse {
 		this.price = price;
 		this.open = open;
 		this.restaurantName = restaurantName;
+	}
+	
+	
+
+	public MenuResponse(Long id, String itemName, double price, boolean open, String restaurantName,
+			Long restaurantId) {
+		super();
+		this.id = id;
+		this.itemName = itemName;
+		this.price = price;
+		this.open = open;
+		this.restaurantName = restaurantName;
+		this.restaurantId = restaurantId;
 	}
 
 	public Long getId() {
@@ -66,6 +81,15 @@ public class MenuResponse {
 
 	public void setRestaurantName(String restaurantName) {
 		this.restaurantName = restaurantName;
+	}
+
+	
+	public Long getRestaurantId() {
+		return restaurantId;
+	}
+
+	public void setRestaurantId(Long restaurantId) {
+		this.restaurantId = restaurantId;
 	}
 
 	@Override

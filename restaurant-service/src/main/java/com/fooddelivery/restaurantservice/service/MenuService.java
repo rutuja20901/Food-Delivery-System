@@ -37,7 +37,7 @@ public class MenuService {
 		return mapToResponse(saved);
 	}
 
-	// Gett all details
+	// Get all details
 	public List<MenuResponse> getMenu() {
 		return menuRepo.findAll().stream().map(this::mapToResponse).toList();
 	}
@@ -76,6 +76,7 @@ public class MenuService {
 		response.setId(menu.getId());
 		response.setItemName(menu.getItemName());
 		response.setPrice(menu.getPrice());
+		response.setRestaurantId(menu.getRestaurant().getId());
 		response.setRestaurantName(menu.getRestaurant().getName());
 		return response;
 	}

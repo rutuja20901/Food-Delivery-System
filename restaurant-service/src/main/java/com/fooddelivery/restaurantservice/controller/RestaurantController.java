@@ -18,6 +18,7 @@ import com.fooddelivery.restaurantservice.dto.RestaurantRequest;
 import com.fooddelivery.restaurantservice.dto.RestaurantResponse;
 import com.fooddelivery.restaurantservice.service.RestaurantService;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 
 @RestController
@@ -26,6 +27,9 @@ public class RestaurantController {
 	
 	@Autowired
 	private RestaurantService restaurantService;
+	
+	@Autowired
+	private HttpServletRequest httpServletRequest;
 	
 	/*
 	 * SERVICE : Restaurant Service
@@ -90,5 +94,18 @@ public class RestaurantController {
 	@DeleteMapping("/{id}")
 	public String deleteRestaurant(@PathVariable Long id) {
 		return restaurantService.deleteRestaurant(id);
+	}
+	
+	
+	/*
+	 * SERVICE : Restaurant Service
+	 * ACCESS  : CUSTOMER, ADMIN, RESTAURANT_OWNER
+	 * API     : GET /restaurants/{id}
+	 * PURPOSE : Internal api for get restaurant 
+	 */
+	@GetMapping("/internal/{id}")
+	public RestaurantResponse getRestaurant(@PathVariable Long id) {
+		
+		return restaurantService.getRestaurantById(id);
 	}
 }
