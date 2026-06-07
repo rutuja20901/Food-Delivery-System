@@ -1,0 +1,212 @@
+1. User Registration Flow
+Flow
+Client (Postman)
+        |
+        v
+User Service
+        |
+        v
+Save User in DB
+        |
+        v
+Publish NotificationEvent to Kafka
+        |
+        v
+notification-topic
+        |
+        v
+Notification Service Consumer
+        |
+        v
+Save Notification in DB
+What happens?
+User registers.
+User data saved in User Service database.
+Kafka Producer sends NotificationEvent.
+Kafka Topic receives event.
+Notification Service consumes event.
+Notification stored in notification table.
+
+
+2. User Login Flow
+Client
+   |
+   v
+User Service
+   |
+   v
+Validate Email & Password
+   |
+   v
+Generate JWT Token
+   |
+   v
+Return Token
+Output
+{
+  "token":"eyJhbGciOiJIUzI1NiJ9..."
+}
+
+
+3. JWT Authentication Flow
+Client
+   |
+Authorization: Bearer Token
+   |
+   v
+JWT Filter
+   |
+   v
+Validate Token
+   |
+   v
+Allow Request
+
+Used in:
+
+User Service
+Restaurant Service
+Order Service
+
+
+4. Kafka Notification Flow
+Event
+NotificationEvent
+{
+    userId,
+    title,
+    message
+}
+Flow
+User Service
+    |
+Kafka Producer
+    |
+notification-topic
+    |
+Notification Consumer
+    |
+Notification DB
+
+This is your first Event-Driven Communication.
+
+
+
+5. Restaurant Creation Flow
+Restaurant Owner
+        |
+        v
+Restaurant Service
+        |
+        v
+Restaurant DB
+
+Restaurant owner can create restaurant.
+
+
+
+6. Menu Creation Flow
+Restaurant Owner
+        |
+        v
+Restaurant Service
+        |
+        v
+Menu Table
+
+Menu items belong to restaurants.
+
+Example:
+
+Restaurant
+   |
+   +-- Pizza
+   +-- Burger
+   +-- Pasta
+
+
+7. Order Creation Flow (Current Work)
+Goal
+
+Before creating order, verify:
+
+Restaurant exists
+Menu exists
+Menu belongs to selected restaurant
+Flow
+Customer
+   |
+   v
+Order Service
+   |
+   +--------------------+
+   |                    |
+   v                    v
+Restaurant Service    Menu API
+   |                    |
+   +---------+----------+
+             |
+             v
+Create Order
+             |
+             v
+Order DB
+Communication Type
+This is:
+Synchronous Communication
+using:
+RestTemplate
+
+
+
+
+8. Internal Service-to-Service Communication
+
+Current flow:
+
+Order Service
+        |
+GET /restaurant/internal/{id}
+        |
+        v
+Restaurant Service
+
+Purpose:
+
+Verify restaurant exists.
+No customer interaction.
+
+This is an Internal API.
+
+Architecture So Far
+                +----------------+
+                |   User Service |
+                +----------------+
+                        |
+                        | Kafka Producer
+                        v
+                +----------------+
+                | notification-  |
+                |     topic      |
+                +----------------+
+                        |
+                        v
+                +----------------+
+                | Notification   |
+                |   Service      |
+                +----------------+
+
+                        ^
+                        |
+                        |
++-----------+     REST Calls      +----------------+
+| Customer  | ------------------> | Order Service  |
++-----------+                     +----------------+
+                                        |
+                        +---------------+---------------+
+                        |                               |
+                        v                               v
+                +----------------+             +----------------+
+                | Restaurant     |             | Menu APIs      |
+                | Service        |             | (Restaurant)   |
+                +----------------+             +----------------+
