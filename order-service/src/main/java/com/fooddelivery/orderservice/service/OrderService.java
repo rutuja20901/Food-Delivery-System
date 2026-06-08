@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.fooddelivery.orderservice.dto.MenuResponse;
+import com.fooddelivery.orderservice.dto.NotificationEvent;
 import com.fooddelivery.orderservice.dto.OrderItemRequest;
 import com.fooddelivery.orderservice.dto.OrderItemResponse;
 import com.fooddelivery.orderservice.dto.OrderRequest;
@@ -26,6 +27,7 @@ import com.fooddelivery.orderservice.entity.Order;
 import com.fooddelivery.orderservice.entity.OrderItem;
 import com.fooddelivery.orderservice.enums.OrderStatus;
 import com.fooddelivery.orderservice.exception.ResourceNotFoundException;
+import com.fooddelivery.orderservice.producer.OrderProducer;
 import com.fooddelivery.orderservice.repository.OrderRepository;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -47,6 +49,9 @@ public class OrderService {
 	
 	@Autowired
 	private HttpServletRequest httpServletRequest;
+	
+	@Autowired
+	private OrderProducer producer;
 	
 	public OrderResponse createOrder(OrderRequest request) {
 		String authHeader = httpServletRequest.getHeader("Authorization");
@@ -140,6 +145,14 @@ public class OrderService {
 
 		    Order savedOrder = orderRepository.save(order);
 
+		    
+		    NotificationEvent event = new NotificationEvent(
+		    		savedOrder.getUserId(),
+		    		savedOrder.getId(),
+	        		"Order Placed",
+	        		"Your order has been placed successfully.");
+	        
+	        producer.sendNotification(event);
 		    return mapToResponse(savedOrder);
 		
 		

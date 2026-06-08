@@ -17,4 +17,9 @@ public class NotificationConsumer {
 	public void consume(NotificationEvent event) {
 		 service.saveNotification(event);
 	}
+	
+	@KafkaListener(topics="order-topic",groupId="order-group")
+	public void consumeOrder(NotificationEvent event) {
+		service.saveNotification(event);
+	}
 }
