@@ -22,4 +22,9 @@ public class NotificationConsumer {
 	public void consumeOrder(NotificationEvent event) {
 		service.saveNotification(event);
 	}
+	
+	@KafkaListener(topics="restaurant-topic",groupId="restaurant-group")
+	public void consumeRestaurant(NotificationEvent event) {
+		service.saveNotification(event);
+	}
 }

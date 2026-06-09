@@ -63,4 +63,21 @@ public class OrderController {
 	public ResponseEntity<String> cancelOrder(@PathVariable Long id){
 		return ResponseEntity.ok(orderService.cancelOrder(id));
 	}
+	
+	@PutMapping("/{id}/accepted")
+	public ResponseEntity<OrderResponse> updateOrder(@PathVariable Long id){
+		return ResponseEntity.ok(orderService.acceptByRestaurant(id));
+	}
+	
+	@PutMapping("/{id}/outdelivery")
+	public ResponseEntity<OrderResponse> outForDelivery(@PathVariable Long id){
+		return ResponseEntity.ok(orderService.outForDelivery(id));
+	}
+	
+	@PutMapping("/{id}/delivered")
+	public ResponseEntity<OrderResponse> orderDelivered(@PathVariable Long id){
+		return ResponseEntity.ok(orderService.orderDelivered(id));
+	}
+	
+	
 }

@@ -181,8 +181,53 @@ public class OrderService {
 		Order order = orderRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Order not found!"));
 		order.setOrderStatus(OrderStatus.CANCELLED);
 		orderRepository.save(order);
+		NotificationEvent event = new NotificationEvent(
+				order.getUserId(),
+				"Order Rejected",
+				"Your order has been rejected");
+		producer.sendNotification(event);
+		
 		return "Order Deleted Successfully";
 	}
+	
+	public OrderResponse acceptByRestaurant(Long id) {
+		Order order = orderRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Order not found!"));
+		order.setOrderStatus(OrderStatus.CONFIRMED);
+		Order savedOrder = orderRepository.save(order);
+		NotificationEvent event = new NotificationEvent(
+				order.getUserId(),
+				"Order Accepted",
+				"Your order has been Accepted");
+		producer.sendNotification(event);
+		return mapToResponse(savedOrder);
+	}
+	
+	
+	public OrderResponse outForDelivery(Long id) {
+		Order order = orderRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Order not found!"));
+		order.setOrderStatus(OrderStatus.OUT_FOR_DELIVERY);
+		Order saved = orderRepository.save(order);
+		NotificationEvent event = new NotificationEvent(
+				order.getUserId(),
+				"Order out for delivery",
+				"Your order is out for delivery");
+		producer.sendNotification(event);
+		return mapToResponse(saved);
+	}
+	
+	public OrderResponse orderDelivered(Long id) {
+		Order order = orderRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Order not found!"));
+		order.setOrderStatus(OrderStatus.DELIVERED);
+		Order saved = orderRepository.save(order);
+		NotificationEvent event = new NotificationEvent(
+				order.getUserId(),
+				"Order delivered",
+				"Your order is delivery");
+		producer.sendNotification(event);
+		return mapToResponse(saved);
+	}
+	
+	
 	
 	public OrderResponse mapToResponse(Order order) {
 		
@@ -200,6 +245,8 @@ public class OrderService {
 			itemResponse.add(orderItemResponse);
 			
 		}
+		
+		
 		
 		
 		OrderResponse response  = new OrderResponse();

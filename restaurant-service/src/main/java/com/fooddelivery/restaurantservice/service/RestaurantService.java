@@ -7,10 +7,12 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import com.fooddelivery.restaurantservice.dto.NotificationEvent;
 import com.fooddelivery.restaurantservice.dto.RestaurantRequest;
 import com.fooddelivery.restaurantservice.dto.RestaurantResponse;
 import com.fooddelivery.restaurantservice.entity.Restaurant;
 import com.fooddelivery.restaurantservice.exception.ResourceNotFoundException;
+import com.fooddelivery.restaurantservice.producer.RestaurantProducer;
 import com.fooddelivery.restaurantservice.repository.RestaurantRepository;
 
 @Service
@@ -19,7 +21,8 @@ public class RestaurantService {
 	@Autowired
 	private RestaurantRepository restaurantRepo;
 	
-	
+	@Autowired
+	private RestaurantProducer producer;
 	
 	/*
 	 * BUSINESS LOGIC :
@@ -61,6 +64,37 @@ public class RestaurantService {
 		Restaurant restaurant = restaurantRepo.findById(id).orElseThrow(() -> new RuntimeException("Restaurant not found"));
 		restaurant.setApprovalStatus("APPROVED");
 		restaurantRepo.save(restaurant);
+		NotificationEvent event = new NotificationEvent(
+				restaurant.getId(),
+				"Approved Restaurant",
+				"Your restaurant has been approved");
+				
+		producer.sendNotification(event);
+		return mapToResponse(restaurant);
+	}
+	
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * PENDING -> REJECT
+	 * Validate restaurant existence
+	 * Update reject status
+	 */
+	public RestaurantResponse rejectRestaurant(Long id) {
+		Restaurant restaurant = restaurantRepo.findById(id).orElseThrow(() -> new RuntimeException("Restaurant not found"));
+		
+		
+			restaurant.setApprovalStatus("REJECT");
+		
+	
+		restaurantRepo.save(restaurant);
+		
+		NotificationEvent event = new NotificationEvent(
+				restaurant.getId(),
+				"Rejects Restaurant",
+				"Your restaurant approval request was rejected");
+		producer.sendNotification(event);
+				
 		return mapToResponse(restaurant);
 	}
 	

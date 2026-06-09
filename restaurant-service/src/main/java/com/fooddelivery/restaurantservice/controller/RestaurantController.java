@@ -54,6 +54,18 @@ public class RestaurantController {
 		return ResponseEntity.ok(restaurantService.approveRestaurant(id));
 	}
 	
+	
+	/*
+	 * SERVICE : Restaurant Service
+	 * ACCESS  : ADMIN
+	 * API     : Reject Restaurant
+	 * PURPOSE : Reject restaurant registration.
+	 */
+	@PatchMapping("/{id}/reject")
+	public ResponseEntity<RestaurantResponse> rejectRestaurant(@PathVariable Long id){
+		return ResponseEntity.ok(restaurantService.rejectRestaurant(id));
+	}
+	
 	/*
 	 * SERVICE : Restaurant Service
 	 * ACCESS  : CUSTOMER, ADMIN, RESTAURANT_OWNER
