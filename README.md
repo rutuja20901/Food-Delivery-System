@@ -18,6 +18,13 @@ A Food Delivery backend system built using Spring Boot Microservices Architectur
 - HikariCP
 - LogBack
 
+## Upcoimg tech stack
+- Swagger
+- Global Exception Handling
+- Feign Client
+- API Gateway
+- Eureka
+- Docker
 
 ## Completed Features
 
@@ -34,7 +41,7 @@ A Food Delivery backend system built using Spring Boot Microservices Architectur
 - RESTAURANT_OWNER
 - ADMIN
 
-## Planned Services
+## Services
 - Restaurant Service
 - Order Service
 - API Gateway

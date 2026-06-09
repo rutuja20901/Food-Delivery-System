@@ -65,3 +65,51 @@
 15. Check Metadata Quorum (KRaft)
     Useful in KRaft mode.
     bin\windows\kafka-metadata-quorum.bat --bootstrap-server localhost:9092 describe --status
+
+###########  KAFKA API  ######### 
+
+1. User Registration ✅ (Already Done)
+User Register
+→ Notification
+→ "Welcome to Food Delivery App"
+
+2. Order Placed ⭐
+Customer Places Order
+→ Notification
+→ "Your order has been placed successfully"
+
+3. Order Accepted by Restaurant ⭐
+Restaurant Accepts Order
+→ Notification
+→ "Your order has been accepted by the restaurant"
+
+4. Order Rejected ⭐
+Restaurant Rejects Order
+→ Notification
+→ "Your order has been rejected"
+
+5. Order Out for Delivery ⭐
+Delivery Partner Assigned
+→ Notification
+→ "Your order is out for delivery"
+
+6. Order Delivered ⭐
+Order Delivered
+→ Notification
+→ "Your order has been delivered successfully"
+
+7. Payment Success
+Payment Completed
+→ Notification
+→ "Payment successful"
+
+8. Restaurant Approved
+Admin Approves Restaurant
+→ Notification
+→ "Your restaurant has been approved"
+Send this to the restaurant owner.
+
+9. Restaurant Rejected
+Admin Rejects Restaurant
+→ Notification
+→ "Your restaurant approval request was rejected"
