@@ -6929,3 +6929,111 @@ This generated password is for development use only. Your security configuration
                 INFO 
                 com.zaxxer.hikari.HikariDataSource
                 - HikariPool-1 - Shutdown completed.
+2026-06-13 15:15:18
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 8.0.2.Final
+2026-06-13 15:15:18
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Starting OrderServiceApplicationTests using Java 21.0.6 with PID 19144 (started by Rutuja in C:\Users\Rutuja\git\Food-Delivery-System\order-service)
+2026-06-13 15:15:18
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-13 15:15:22
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-13 15:15:22
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 245 ms. Found 2 JPA repository interfaces.
+2026-06-13 15:15:25
+                INFO 
+                o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-13 15:15:25
+                INFO 
+                org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.18.Final
+2026-06-13 15:15:25
+                INFO 
+                o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-06-13 15:15:27
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-13 15:15:27
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-06-13 15:15:28
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41f7c02d
+2026-06-13 15:15:28
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-06-13 15:15:28
+                WARN 
+                org.hibernate.dialect.Dialect
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-13 15:15:28
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-13 15:15:28
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-13 15:15:31
+                INFO 
+                o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-13 15:15:33
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-13 15:15:34
+                WARN 
+                o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-13 15:15:34
+                WARN 
+                o.s.b.a.s.s.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 5fe6fe37-f8c2-48c9-ae40-59a873ea1cfa
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-13 15:15:34
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-13 15:15:37
+                INFO 
+                c.f.o.OrderServiceApplicationTests
+                - Started OrderServiceApplicationTests in 19.834 seconds (process running for 23.844)
+2026-06-13 15:15:38
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-13 15:15:38
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-06-13 15:15:38
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.

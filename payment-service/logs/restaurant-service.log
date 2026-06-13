@@ -1,0 +1,240 @@
+2026-06-13 15:10:05
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 8.0.2.Final
+2026-06-13 15:10:05
+                INFO 
+                c.f.p.PaymentServiceApplicationTests
+                - Starting PaymentServiceApplicationTests using Java 21.0.6 with PID 14724 (started by Rutuja in C:\Users\Rutuja\git\Food-Delivery-System\payment-service)
+2026-06-13 15:10:05
+                INFO 
+                c.f.p.PaymentServiceApplicationTests
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-13 15:10:08
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-13 15:10:09
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 453 ms. Found 1 JPA repository interface.
+2026-06-13 15:10:10
+                INFO 
+                o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=e0fefa82-1af6-384c-9581-a24214843a9a
+2026-06-13 15:10:12
+                INFO 
+                o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-13 15:10:12
+                INFO 
+                org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.18.Final
+2026-06-13 15:10:12
+                INFO 
+                o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-06-13 15:10:13
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-13 15:10:14
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-06-13 15:10:14
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57ed02e6
+2026-06-13 15:10:14
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-06-13 15:10:14
+                WARN 
+                org.hibernate.dialect.Dialect
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-13 15:10:14
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-13 15:10:15
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-13 15:10:17
+                INFO 
+                o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-13 15:10:17
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-13 15:10:19
+                WARN 
+                o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-13 15:10:19
+                WARN 
+                o.s.b.a.s.s.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 6c284001-a00c-4572-b557-7333b5d460b0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-13 15:10:19
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-13 15:10:22
+                INFO 
+                o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-06-13 15:10:23
+                WARN 
+                o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-13 15:10:23
+                INFO 
+                c.f.p.PaymentServiceApplicationTests
+                - Started PaymentServiceApplicationTests in 19.687 seconds (process running for 24.039)
+2026-06-13 15:10:24
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-13 15:10:24
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-06-13 15:10:24
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.
+2026-06-13 15:23:17
+                INFO 
+                o.h.validator.internal.util.Version
+                - HV000001: Hibernate Validator 8.0.2.Final
+2026-06-13 15:23:17
+                INFO 
+                c.f.p.PaymentServiceApplicationTests
+                - Starting PaymentServiceApplicationTests using Java 21.0.6 with PID 20052 (started by Rutuja in C:\Users\Rutuja\git\Food-Delivery-System\payment-service)
+2026-06-13 15:23:17
+                INFO 
+                c.f.p.PaymentServiceApplicationTests
+                - No active profile set, falling back to 1 default profile: "default"
+2026-06-13 15:23:22
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-13 15:23:24
+                INFO 
+                o.s.d.r.c.RepositoryConfigurationDelegate
+                - Finished Spring Data repository scanning in 1542 ms. Found 1 JPA repository interface.
+2026-06-13 15:23:27
+                INFO 
+                o.s.cloud.context.scope.GenericScope
+                - BeanFactory id=e0fefa82-1af6-384c-9581-a24214843a9a
+2026-06-13 15:23:30
+                INFO 
+                o.h.jpa.internal.util.LogHelper
+                - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-13 15:23:31
+                INFO 
+                org.hibernate.Version
+                - HHH000412: Hibernate ORM core version 6.6.18.Final
+2026-06-13 15:23:31
+                INFO 
+                o.h.c.i.RegionFactoryInitiator
+                - HHH000026: Second-level cache disabled
+2026-06-13 15:23:33
+                INFO 
+                o.s.o.j.p.SpringPersistenceUnitInfo
+                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-13 15:23:33
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Starting...
+2026-06-13 15:23:34
+                INFO 
+                com.zaxxer.hikari.pool.HikariPool
+                - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f12d5e0
+2026-06-13 15:23:34
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Start completed.
+2026-06-13 15:23:34
+                WARN 
+                org.hibernate.dialect.Dialect
+                - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-13 15:23:34
+                WARN 
+                org.hibernate.orm.deprecation
+                - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-13 15:23:34
+                INFO 
+                o.hibernate.orm.connections.pooling
+                - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-13 15:23:37
+                INFO 
+                o.h.e.t.j.p.i.JtaPlatformInitiator
+                - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-13 15:23:37
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-13 15:23:39
+                WARN 
+                o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration
+                - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-13 15:23:39
+                WARN 
+                o.s.b.a.s.s.UserDetailsServiceAutoConfiguration
+                - 
+
+Using generated security password: 1329620d-4723-4bf4-b432-fd80390c2cbf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-06-13 15:23:39
+                INFO 
+                o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer
+                - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-06-13 15:23:42
+                INFO 
+                o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration
+                - Eureka HTTP Client uses RestTemplate.
+2026-06-13 15:23:42
+                WARN 
+                o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger
+                - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-13 15:23:42
+                INFO 
+                c.f.p.PaymentServiceApplicationTests
+                - Started PaymentServiceApplicationTests in 27.943 seconds (process running for 34.464)
+2026-06-13 15:23:43
+                INFO 
+                o.s.o.j.LocalContainerEntityManagerFactoryBean
+                - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-13 15:23:43
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown initiated...
+2026-06-13 15:23:43
+                INFO 
+                com.zaxxer.hikari.HikariDataSource
+                - HikariPool-1 - Shutdown completed.

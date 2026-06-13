@@ -19,7 +19,7 @@ import com.fooddelivery.paymentservice.service.PaymentService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("payment")
+@RequestMapping("/payment")
 public class PaymentController {
 
 	@Autowired
