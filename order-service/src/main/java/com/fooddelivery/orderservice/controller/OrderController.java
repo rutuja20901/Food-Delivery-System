@@ -19,8 +19,11 @@ import com.fooddelivery.orderservice.dto.OrderRequest;
 import com.fooddelivery.orderservice.dto.OrderResponse;
 import com.fooddelivery.orderservice.service.OrderService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
+@Tag(name="Order APIs")
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
@@ -30,10 +33,9 @@ public class OrderController {
 	
 	
 	
-
+	@Operation(summary="Create Order")
 	@PostMapping
 	public ResponseEntity<OrderResponse> createOrder(@Valid @RequestBody OrderRequest request) {
-		System.out.println("Controller hit");
 		Authentication auth =
 			    SecurityContextHolder
 			    .getContext()
@@ -44,31 +46,37 @@ public class OrderController {
 		return ResponseEntity.ok(orderService.createOrder(request));
 	}
 	
+	@Operation(summary="Get Order by Id")
 	@GetMapping("/{id}")
 	public ResponseEntity<OrderResponse> getOrderById(@PathVariable Long id){
 		return ResponseEntity.ok(orderService.getOrderById(id));
 	}
 	
+	@Operation(summary="Get All Order")
 	@GetMapping
 	public ResponseEntity<List<OrderResponse>> getAllOrder(){
 		return ResponseEntity.ok(orderService.getAllOrder());
 	}
 	
+	@Operation(summary="Update Order Status by Id")
 	@PutMapping("/{id}/status")
 	public ResponseEntity<OrderResponse> updateOrder(@PathVariable Long id,@PathVariable String status){
 		return ResponseEntity.ok(orderService.updateStatus(status, id));
 	}
 	
+	@Operation(summary="Delete Order by Id")
 	@DeleteMapping("/{id}")
 	public ResponseEntity<String> cancelOrder(@PathVariable Long id){
 		return ResponseEntity.ok(orderService.cancelOrder(id));
 	}
 	
+	@Operation(summary="Update OrderStatus(accepted) by Id")
 	@PutMapping("/{id}/accepted")
 	public ResponseEntity<OrderResponse> updateOrder(@PathVariable Long id){
 		return ResponseEntity.ok(orderService.acceptByRestaurant(id));
 	}
 	
+	@Operation(summary="Update OrderStatus(OutForDelivery) by Id")
 	@PutMapping("/{id}/outdelivery")
 	public ResponseEntity<OrderResponse> outForDelivery(@PathVariable Long id){
 		return ResponseEntity.ok(orderService.outForDelivery(id));
