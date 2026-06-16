@@ -12,6 +12,10 @@ import com.fooddelivery.notification.entity.Notification;
 import com.fooddelivery.notification.repository.NotificationRepository;
 import com.fooddelivery.notification.service.NotificationService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
+@Tag(name="Notification APIs")
 @RestController
 @RequestMapping("/notifications")
 public class NotificationController {
@@ -23,6 +27,7 @@ public class NotificationController {
 	@Autowired
 	private NotificationRepository repo;
 	
+	@Operation(summary="Get Notification by User Id")
 	@GetMapping("/user/{userId}")
 	public List<Notification> getNotification(@PathVariable Long userId){
 		return repo.findByUserId(userId);
