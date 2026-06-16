@@ -21,8 +21,13 @@ public class SecurityConfig {
 		System.out.println("restaurant security is running");
         http
         .csrf(csrf -> csrf.disable())
-
+        
         .authorizeHttpRequests(auth -> auth
+        		.requestMatchers(
+        			    "/swagger-ui/**",
+        			    "/v3/api-docs/**",
+        			    "/swagger-ui.html"
+        			).permitAll()
         .requestMatchers("/restaurant/internal/**").permitAll()
         .requestMatchers(HttpMethod.POST,"/restaurant").hasRole("RESTAURANT_OWNER")
         .requestMatchers("/restaurant/*/approve").hasRole("ADMIN")

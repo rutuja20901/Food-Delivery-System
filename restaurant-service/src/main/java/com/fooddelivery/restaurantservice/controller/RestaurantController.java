@@ -18,9 +18,12 @@ import com.fooddelivery.restaurantservice.dto.RestaurantRequest;
 import com.fooddelivery.restaurantservice.dto.RestaurantResponse;
 import com.fooddelivery.restaurantservice.service.RestaurantService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 
+@Tag(name="Restaurant APIs")
 @RestController
 @RequestMapping("/restaurant")
 public class RestaurantController {
@@ -37,6 +40,7 @@ public class RestaurantController {
 	 * API     : Create Restaurant
 	 * PURPOSE : Create New Restaurant.
 	 */
+	@Operation(summary="Add Restaurant")
 	@PostMapping
 	public RestaurantResponse addRestaurant(@Valid @RequestBody RestaurantRequest res) {
 		return restaurantService.addRestaurant(res);
@@ -49,6 +53,7 @@ public class RestaurantController {
 	 * API     : Approve Restaurant
 	 * PURPOSE : Approve restaurant registration.
 	 */
+	@Operation(summary="Update Restaurant Status Approve by Id")
 	@PatchMapping("/{id}/approve")
 	public ResponseEntity<RestaurantResponse> approveRestaurant(@PathVariable Long id){
 		return ResponseEntity.ok(restaurantService.approveRestaurant(id));
@@ -61,6 +66,7 @@ public class RestaurantController {
 	 * API     : Reject Restaurant
 	 * PURPOSE : Reject restaurant registration.
 	 */
+	@Operation(summary="Update Restaurant Status Reject by Id")
 	@PatchMapping("/{id}/reject")
 	public ResponseEntity<RestaurantResponse> rejectRestaurant(@PathVariable Long id){
 		return ResponseEntity.ok(restaurantService.rejectRestaurant(id));
@@ -72,6 +78,7 @@ public class RestaurantController {
 	 * API     : GET /restaurants
 	 * PURPOSE : View all approved restaurants
 	 */
+	@Operation(summary="Get All Restaurant")
 	@GetMapping
 	public List<RestaurantResponse> getRestaurant(){
 		return restaurantService.getRestaurant();
@@ -83,6 +90,7 @@ public class RestaurantController {
 	 * API     : GET /restaurants/{id}
 	 * PURPOSE : View restaurant details
 	 */
+	@Operation(summary="Get Restaurant by Id")
 	@GetMapping("/{id}")
 	public RestaurantResponse getRestaurantById(@PathVariable Long id) {
 		return restaurantService.getRestaurantById(id);
@@ -93,6 +101,7 @@ public class RestaurantController {
 	 * API     : PUT /restaurants/{id}
 	 * PURPOSE : Update restaurant details
 	 */
+	@Operation(summary="Update Restaurant by Id")
 	@PutMapping("/{id}")
 	public RestaurantResponse updateRestaurant(@Valid @RequestBody RestaurantRequest res, @PathVariable Long id) {
 		return restaurantService.updateRestaurant(id, res);
@@ -103,6 +112,7 @@ public class RestaurantController {
 	 * API     : DELETE /restaurants/{id}
 	 * PURPOSE : Remove restaurant
 	 */
+	@Operation(summary="Delete Restaurant by Id")
 	@DeleteMapping("/{id}")
 	public String deleteRestaurant(@PathVariable Long id) {
 		return restaurantService.deleteRestaurant(id);
@@ -115,6 +125,7 @@ public class RestaurantController {
 	 * API     : GET /restaurants/{id}
 	 * PURPOSE : Internal api for get restaurant 
 	 */
+	@Operation(summary="Internal Api - Get Restaurant by Id")
 	@GetMapping("/internal/{id}")
 	public RestaurantResponse getRestaurant(@PathVariable Long id) {
 		
