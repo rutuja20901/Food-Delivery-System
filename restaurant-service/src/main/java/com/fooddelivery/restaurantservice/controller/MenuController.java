@@ -20,41 +20,66 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
-
-@Tag(name="Menu APIs")
+@Tag(name = "Menu APIs")
 @RestController
 @RequestMapping("/menu")
 public class MenuController {
 
-	
 	@Autowired
 	private MenuService menuService;
+
 	
-	@Operation(summary="Add Restaurant in Menu")
+	/*
+	 * API : ADD MENU ITEM
+	 * Create a new menu item for a restaurant
+	 * Accepts menu item details and restaurant ID
+	 */
+	@Operation(summary = "Add Restaurant in Menu")
 	@PostMapping
 	public MenuResponse addRestaurant(@Valid @RequestBody MenuRequest res) {
 		return menuService.addMenu(res);
 	}
+
 	
-	@Operation(summary="Get All Menu")
+	/*
+	 * API : GET ALL MENU ITEMS
+	 * Retrieve all menu items
+	 * Returns menu details with restaurant information
+	 */
+	@Operation(summary = "Get All Menu")
 	@GetMapping
-	public List<MenuResponse> getMenu(){
+	public List<MenuResponse> getMenu() {
 		return menuService.getMenu();
 	}
+
 	
-	@Operation(summary="Get Menu by Id")
+	/*
+	 * API : GET MENU BY ID
+	 * Retrieve menu item details using menu ID
+	 */
+	@Operation(summary = "Get Menu by Id")
 	@GetMapping("/{id}")
 	public MenuResponse getMenuById(@PathVariable Long id) {
 		return menuService.getMenuById(id);
 	}
+
 	
-	@Operation(summary="Update Menu by Id")
+	/*
+	 * API : UPDATE MENU ITEM
+	 * Update menu item information by menu ID
+	 */
+	@Operation(summary = "Update Menu by Id")
 	@PutMapping("/{id}")
 	public MenuResponse updateMenu(@Valid @RequestBody MenuRequest res, @PathVariable Long id) {
 		return menuService.updateMenu(id, res);
 	}
+
 	
-	@Operation(summary="Delete Menu by Id")
+	/*
+	 * API : DELETE MENU ITEM
+	 * Remove menu item from database using menu ID
+	 */
+	@Operation(summary = "Delete Menu by Id")
 	@DeleteMapping("/{id}")
 	public String deleteMenu(@PathVariable Long id) {
 		return menuService.deleteMenu(id);

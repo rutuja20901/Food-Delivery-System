@@ -23,7 +23,14 @@ public class MenuService {
 	@Autowired
 	private RestaurantRepository restaurantRepo;
 
-	// Add menu
+	/*
+	 * BUSINESS LOGIC :
+	 * Validate restaurant existence
+	 * Create menu item entity
+	 * Associate menu item with restaurant
+	 * Save menu item into database
+	 * Return menu response
+	 */
 	public MenuResponse addMenu(MenuRequest request) {
 		Restaurant restaurant = restaurantRepo.findById(request.getRestaurantId())
 
@@ -37,18 +44,42 @@ public class MenuService {
 		return mapToResponse(saved);
 	}
 
-	// Get all details
+	
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Fetch all menu items from database
+	 * Convert entities to response DTOs
+	 * Return menu list
+	 */
 	public List<MenuResponse> getMenu() {
 		return menuRepo.findAll().stream().map(this::mapToResponse).toList();
 	}
 
-	// Get menu by id
+	
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Find menu item by ID
+	 * Validate menu existence
+	 * Convert entity to response DTO
+	 * Return menu details
+	 */
 	public MenuResponse getMenuById(Long id) {
 		Menu menu = menuRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Menu not found!"));
 		return mapToResponse(menu);
 	}
 
-	// Update menu by id
+
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Find menu item by ID
+	 * Validate menu existence
+	 * Update menu item details
+	 * Save updated menu item
+	 * Return updated response
+	 */
 	public MenuResponse updateMenu(Long id, MenuRequest menu) {
 		Menu res = menuRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Menu Not found!"));
 
@@ -59,8 +90,15 @@ public class MenuService {
 		return mapToResponse(updated);
 	}
 
-	// Delete menu
-
+	
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Find menu item by ID
+	 * Validate menu existence
+	 * Delete menu item from database
+	 * Return success message
+	 */
 	public String deleteMenu(Long id) {
 		Menu menu = menuRepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Menu Not Found"));
 
@@ -69,6 +107,13 @@ public class MenuService {
 		return "Menu Deleted";
 	}
 
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Convert Menu entity to MenuResponse DTO
+	 * Include restaurant details
+	 * Return formatted response object
+	 */
 	private MenuResponse mapToResponse(Menu menu) {
 
 		MenuResponse response = new MenuResponse();
