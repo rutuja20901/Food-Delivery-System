@@ -17,67 +17,90 @@ public class AdminService {
 
 	@Autowired
 	private AdminRepository adminRepository;
-	
+
+	/*
+	 * BUSINESS LOGIC : 
+	 * Find user by ID Validate 
+	 * user existence Change status to
+	 * ACTIVE Save updated user 
+	 * details Return success response
+	 */
 	public MessageResponse activateUser(ActivateDeactivate request) {
-		
-		User user = adminRepository.findById(request.getId())
-		        .orElseThrow(() -> new RuntimeException("User not found"));
+
+		User user = adminRepository.findById(request.getId()).orElseThrow(() -> new RuntimeException("User not found"));
 
 		user.setUserStatus(UserStatus.ACTIVE);
 		adminRepository.saveAndFlush(user);
 		MessageResponse response = new MessageResponse();
-		
+
 		response.setSuccess(true);
 		response.setMessage("User Account Activated Successfully");
-		
+
 		return response;
-		
+
 	}
-	
+
+	/*
+     * BUSINESS LOGIC :
+     * Find user by ID
+     * Validate user existence
+     * Change status to DEACTIVE
+     * Save updated user details
+     * Return success response
+     */
 	public MessageResponse deactivateUser(ActivateDeactivate request) {
-		User user = adminRepository.findById(request.getId())
-		        .orElseThrow(() -> new RuntimeException("User not found"));
+		User user = adminRepository.findById(request.getId()).orElseThrow(() -> new RuntimeException("User not found"));
 
 		user.setUserStatus(UserStatus.DEACTIVE);
 		adminRepository.saveAndFlush(user);
-		
+
 		MessageResponse response = new MessageResponse();
-		
-		response.setSuccess(false);
+
+		response.setSuccess(true);
 		response.setMessage("User Account Deactivated Successfully");
-		
+
 		return response;
-		
+
 	}
+
 	
-	
-		public List<UserResponseDto> getAllUsers() {
+	/*
+     * BUSINESS LOGIC :
+     * Fetch all users from database
+     * Validate user list is not empty
+     * Convert User entities to DTOs
+     * Return user details to controller
+     */
+	public List<UserResponseDto> getAllUsers() {
 
-			 List<User> users = adminRepository.findAll();
+		List<User> users = adminRepository.findAll();
 
-			    if (users.isEmpty()) {
-			        throw new RuntimeException("No users found");
-			    }
-
-			    return users.stream()
-			            .map(this::mapToResponseDto)
-			            .toList();
+		if (users.isEmpty()) {
+			throw new RuntimeException("No users found");
 		}
-		
-		public UserResponseDto mapToResponseDto(User user) {
-			UserResponseDto dto = new UserResponseDto();
 
-		    dto.setId(user.getId());
-		    dto.setFullName(user.getName());
-		    dto.setEmail(user.getEmail());
-		    dto.setMobileNumber(user.getPhone());
-		    dto.setRole(user.getRole());
-		  
-		    dto.setStatus(user.getUserStatus().name());
-		    
+		return users.stream().map(this::mapToResponseDto).toList();
+	}
 
-		    return dto;
-		}
 	
+	/*
+     * BUSINESS LOGIC :
+     * Convert User Entity into UserResponseDto
+     * Hide sensitive information
+     * Return required user details
+     */
+	public UserResponseDto mapToResponseDto(User user) {
+		UserResponseDto dto = new UserResponseDto();
+
+		dto.setId(user.getId());
+		dto.setFullName(user.getName());
+		dto.setEmail(user.getEmail());
+		dto.setMobileNumber(user.getPhone());
+		dto.setRole(user.getRole());
+
+		dto.setStatus(user.getUserStatus().name());
+
+		return dto;
+	}
 
 }

@@ -19,29 +19,47 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
-@Tag(name="Admin APIs")
+@Tag(name = "Admin APIs")
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
 
 	@Autowired
 	private AdminService adminService;
+
 	
-	@Operation(summary="Admin Activate User")
+	
+	/*
+	 * API : ACTIVATE USER Activate user account by user ID Change user status from
+	 * DEACTIVE to ACTIVE Accessible only by Admin
+	 */
+	@Operation(summary = "Admin Activate User")
 	@PutMapping("/users/{id}/active")
 	public ResponseEntity<MessageResponse> activateUser(@Valid @RequestBody ActivateDeactivate request) {
 		return ResponseEntity.ok(adminService.activateUser(request));
 	}
+
 	
-	@Operation(summary="Admin Deactivate User")
+	
+	/*
+	 * API : DEACTIVATE USER Deactivate user account by user ID Change user status
+	 * from ACTIVE to DEACTIVE Accessible only by Admin
+	 */
+	@Operation(summary = "Admin Deactivate User")
 	@PutMapping("/users/{id}/deactive")
 	public ResponseEntity<MessageResponse> deactivateUser(@Valid @RequestBody ActivateDeactivate request) {
 		return ResponseEntity.ok(adminService.deactivateUser(request));
 	}
+
 	
-	@Operation(summary="List of all Users")
+	
+	/*
+	 * API : GET ALL USERS Retrieve all registered users Returns user profile
+	 * information Accessible only by Admin
+	 */
+	@Operation(summary = "List of all Users")
 	@GetMapping
-	public ResponseEntity<List<UserResponseDto>> getAllUsers(){
+	public ResponseEntity<List<UserResponseDto>> getAllUsers() {
 		return ResponseEntity.ok(adminService.getAllUsers());
 	}
 }

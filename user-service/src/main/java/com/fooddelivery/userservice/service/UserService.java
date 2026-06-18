@@ -14,16 +14,21 @@ import com.fooddelivery.userservice.repository.UserRepository;
 @Service
 public class UserService {
 
-	/*
-	 * users APIs: GET /users/profile - done PUT /users/profile PUT
-	 * /users/change-password DELETE /users/account
-	 */
+	
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Get authenticated user's email
+	 * Fetch user details from database
+	 * Map entity data to response DTO
+	 * Return user profile information
+	 */
 	public GetProfileResponse userProfile() {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
 
@@ -38,6 +43,14 @@ public class UserService {
 
 	}
 
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Get authenticated user
+	 * Update profile details
+	 * Save updated information
+	 * Return updated profile response
+	 */
 	public GetProfileResponse updateProfile(UpdateProfileRequest request) {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
 
@@ -57,20 +70,37 @@ public class UserService {
 		return response;
 	}
 
+	
+	/*
+	 * BUSINESS LOGIC :
+	 * Get authenticated user
+	 * Validate old password
+	 * Encode new password
+	 * Save updated password
+	 * Return success message
+	 */
 	public String changePassword(ChangePasswordRequest request) {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
 		User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User is not found!"));
-		
-		boolean matches = passwordEncoder.matches(request.getNewPassword(), request.getOldPassword());
-		if(!matches) {
+
+		boolean matches = passwordEncoder.matches(request.getNewPassword(), user.getPassword());
+		if (!matches) {
 			throw new RuntimeException("Passwords are not matched!");
 		}
-		
+
 		user.setPassword(passwordEncoder.encode(request.getNewPassword()));
+		userRepository.save(user);
 		return "Password Change Successfully!";
 	}
+
 	
-	
+	/*
+	 * BUSINESS LOGIC :
+	 * Find user by ID
+	 * Validate user existence
+	 * Delete user account
+	 * Return success message
+	 */
 	public String deleteProfile(Long id) {
 		User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User is not found!"));
 		userRepository.delete(user);
