@@ -23,69 +23,119 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
-@Tag(name="Order APIs")
+@Tag(name = "Order APIs")
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
 
 	@Autowired
 	private OrderService orderService;
+
 	
-	
-	
-	@Operation(summary="Create Order")
+	/*
+	 * SERVICE : Order Service
+	 * ACCESS  : CUSTOMER
+	 * API     : POST /orders
+	 * PURPOSE : Create a new order for a restaurant.
+	 */
+	@Operation(summary = "Create Order")
 	@PostMapping
 	public ResponseEntity<OrderResponse> createOrder(@Valid @RequestBody OrderRequest request) {
-		Authentication auth =
-			    SecurityContextHolder
-			    .getContext()
-			    .getAuthentication();
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
-			System.out.println(auth.getName());
-			System.out.println(auth.getAuthorities());
+		System.out.println(auth.getName());
+		System.out.println(auth.getAuthorities());
 		return ResponseEntity.ok(orderService.createOrder(request));
 	}
+
 	
-	@Operation(summary="Get Order by Id")
+	/*
+	 * SERVICE : Order Service
+	 * ACCESS  : CUSTOMER, ADMIN
+	 * API     : GET /orders/{id}
+	 * PURPOSE : Retrieve order details by order ID.
+	 */
+	@Operation(summary = "Get Order by Id")
 	@GetMapping("/{id}")
-	public ResponseEntity<OrderResponse> getOrderById(@PathVariable Long id){
+	public ResponseEntity<OrderResponse> getOrderById(@PathVariable Long id) {
 		return ResponseEntity.ok(orderService.getOrderById(id));
 	}
+
 	
-	@Operation(summary="Get All Order")
+	/*
+	 * SERVICE : Order Service
+	 * ACCESS  : ADMIN
+	 * API     : GET /orders
+	 * PURPOSE : Retrieve all orders.
+	 */
+	@Operation(summary = "Get All Order")
 	@GetMapping
-	public ResponseEntity<List<OrderResponse>> getAllOrder(){
+	public ResponseEntity<List<OrderResponse>> getAllOrder() {
 		return ResponseEntity.ok(orderService.getAllOrder());
 	}
+
 	
-	@Operation(summary="Update Order Status by Id")
-	@PutMapping("/{id}/status")
-	public ResponseEntity<OrderResponse> updateOrder(@PathVariable Long id,@PathVariable String status){
+	/*
+	 * SERVICE : Order Service
+	 * ACCESS  : ADMIN
+	 * API     : PUT /orders/{id}/status
+	 * PURPOSE : Update order status manually.
+	 */
+	@Operation(summary = "Update Order Status by Id")
+	@PutMapping("/{id}/status/{status}")
+	public ResponseEntity<OrderResponse> updateOrder(@PathVariable Long id, @PathVariable String status) {
 		return ResponseEntity.ok(orderService.updateStatus(status, id));
 	}
+
 	
-	@Operation(summary="Delete Order by Id")
+	/*
+	 * SERVICE : Order Service
+	 * ACCESS  : CUSTOMER
+	 * API     : DELETE /orders/{id}
+	 * PURPOSE : Cancel an existing order.
+	 */
+	@Operation(summary = "Delete Order by Id")
 	@DeleteMapping("/{id}")
-	public ResponseEntity<String> cancelOrder(@PathVariable Long id){
+	public ResponseEntity<String> cancelOrder(@PathVariable Long id) {
 		return ResponseEntity.ok(orderService.cancelOrder(id));
 	}
+
 	
-	@Operation(summary="Update OrderStatus(accepted) by Id")
+	/*
+	 * SERVICE : Order Service
+	 * ACCESS  : RESTAURANT_OWNER
+	 * API     : PUT /orders/{id}/accepted
+	 * PURPOSE : Accept customer order.
+	 */
+	@Operation(summary = "Update OrderStatus(accepted) by Id")
 	@PutMapping("/{id}/accepted")
-	public ResponseEntity<OrderResponse> updateOrder(@PathVariable Long id){
+	public ResponseEntity<OrderResponse> updateOrder(@PathVariable Long id) {
 		return ResponseEntity.ok(orderService.acceptByRestaurant(id));
 	}
 	
-	@Operation(summary="Update OrderStatus(OutForDelivery) by Id")
+	
+	/*
+	 * SERVICE : Order Service
+	 * ACCESS  : RESTAURANT_OWNER
+	 * API     : PUT /orders/{id}/accepted
+	 * PURPOSE : Accept customer order.
+	 */
+	@Operation(summary = "Update OrderStatus(OutForDelivery) by Id")
 	@PutMapping("/{id}/outdelivery")
-	public ResponseEntity<OrderResponse> outForDelivery(@PathVariable Long id){
+	public ResponseEntity<OrderResponse> outForDelivery(@PathVariable Long id) {
 		return ResponseEntity.ok(orderService.outForDelivery(id));
 	}
+
 	
+	/*
+	 * SERVICE : Order Service
+	 * ACCESS  : DELIVERY_PARTNER
+	 * API     : PUT /orders/{id}/delivered
+	 * PURPOSE : Mark order as Delivered.
+	 */
 	@PutMapping("/{id}/delivered")
-	public ResponseEntity<OrderResponse> orderDelivered(@PathVariable Long id){
+	public ResponseEntity<OrderResponse> orderDelivered(@PathVariable Long id) {
 		return ResponseEntity.ok(orderService.orderDelivered(id));
 	}
-	
-	
+
 }
