@@ -10,6 +10,7 @@ import com.fooddelivery.userservice.dto.MessageResponse;
 import com.fooddelivery.userservice.dto.UserResponseDto;
 import com.fooddelivery.userservice.entity.User;
 import com.fooddelivery.userservice.enums.UserStatus;
+import com.fooddelivery.userservice.exception.ResourceNotFoundException;
 import com.fooddelivery.userservice.repository.AdminRepository;
 
 @Service
@@ -27,7 +28,7 @@ public class AdminService {
 	 */
 	public MessageResponse activateUser(ActivateDeactivate request) {
 
-		User user = adminRepository.findById(request.getId()).orElseThrow(() -> new RuntimeException("User not found"));
+		User user = adminRepository.findById(request.getId()).orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
 		user.setUserStatus(UserStatus.ACTIVE);
 		adminRepository.saveAndFlush(user);
@@ -49,7 +50,7 @@ public class AdminService {
      * Return success response
      */
 	public MessageResponse deactivateUser(ActivateDeactivate request) {
-		User user = adminRepository.findById(request.getId()).orElseThrow(() -> new RuntimeException("User not found"));
+		User user = adminRepository.findById(request.getId()).orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
 		user.setUserStatus(UserStatus.DEACTIVE);
 		adminRepository.saveAndFlush(user);
@@ -76,7 +77,7 @@ public class AdminService {
 		List<User> users = adminRepository.findAll();
 
 		if (users.isEmpty()) {
-			throw new RuntimeException("No users found");
+			throw new ResourceNotFoundException("No users found");
 		}
 
 		return users.stream().map(this::mapToResponseDto).toList();
