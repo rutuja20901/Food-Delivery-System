@@ -1,6 +1,7 @@
 package com.fooddelivery.restaurantservice.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -16,6 +17,7 @@ public class RestaurantRequest {
 	@NotBlank(message="Cuisine Type required")
 	private String cuisineType;
 	
+	@NotNull
 	private boolean open;
 	
 	@NotBlank(message="Owner Name required")
@@ -37,9 +39,11 @@ public class RestaurantRequest {
 	
 	
 
+	
+
 	public RestaurantRequest(@NotBlank(message = "Restaurant name required") String name,
 			@NotBlank(message = "Address required") String address,
-			@NotBlank(message = "Cuisine Type required") String cuisineType, boolean open,
+			@NotBlank(message = "Cuisine Type required") String cuisineType, @NotNull boolean open,
 			@NotBlank(message = "Owner Name required") String ownerName) {
 		super();
 		this.name = name;

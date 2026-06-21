@@ -13,6 +13,7 @@ public class MenuRequest {
 	@NotNull(message="Price required")
 	private double price;
 	
+	@NotNull
 	private boolean available;
 	
 	@NotNull(message="Restaurant Id required")
@@ -23,7 +24,7 @@ public class MenuRequest {
 	}
 
 	public MenuRequest(@NotBlank(message = "Item name required") String itemName,
-			@NotBlank(message = "Price required") double price, boolean available,
+			@NotBlank(message = "Price required") double price, @NotNull boolean available,
 			@NotBlank(message = "Restaurant Id required") Long restaurantId) {
 		super();
 		this.itemName = itemName;
