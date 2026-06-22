@@ -1,0 +1,30 @@
+Docker + Spring Boot MySQL Communication Link Error Troubleshooting
+
+Issue: Spring Boot container fails with 'Communications link failure' or 'java.net.ConnectException: Connection refused' while connecting to MySQL.
+Root Cause Found
+The application container could not connect to MySQL because of Docker networking and MySQL configuration issues. Local MySQL was already 
+using port 3306, and the application needed to connect to the Docker MySQL container through the Docker network.
+
+
+Solution Steps
+Create a Docker network: docker network create food-delivery-network
+Run MySQL in Docker with a root password and database.
+Use port mapping 3307:3306 because local MySQL was already using port 3306.
+Configure Spring Boot datasource URL as jdbc:mysql://mysql-db:3306/fooddelivery
+Rebuild the Spring Boot JAR and Docker image.
+Run payment-service on the same Docker network.
+Verify both containers are attached to the network using docker network inspect.
+
+
+Working MySQL Docker Command
+docker run -d --name mysql-db --network food-delivery-network -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=fooddelivery -p 3307:3306 mysql:8.0
+Spring Boot Configuration
+spring.datasource.url=jdbc:mysql://mysql-db:3306/fooddelivery
+spring.datasource.username=root
+spring.datasource.password=root
+Useful Debug Commands
+docker ps
+docker ps -a
+docker logs mysql-db
+docker logs payment-service
+docker network inspect food-delivery-network
